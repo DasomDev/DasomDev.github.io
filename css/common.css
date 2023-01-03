@@ -21,16 +21,21 @@
   h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd{margin: 0; padding: 0;}
   body {line-height: 1; margin: 0;}
   ol, ul {list-style: none;}
-  table {border-collapse: collapse;	border-spacing: 0; cellpadding}
+  table {border-collapse: collapse;	border-spacing: 0;}
   a{color:inherit; text-decoration: none;}
   address, em, i{font-style: normal; }
-  img{border: none; }
+  img{border: none; width: 100%;}
   input:focus, select:focus{outline: none}
 
   /* ROOT CSS */
   :root{
     --font-black:#393939;
-    --main-blue:#628395;
+    --font-grey:#7C7B80;
+    --font-blue:#6889FB;
+    --font-violet:#806D9C;
+    --font-white:#efefef;
+    --main-blue:#070C17;
+    --main-background:#212024;
     --red: #FF6243;
     --green: #9CB964;
   }

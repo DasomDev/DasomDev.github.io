@@ -5,38 +5,292 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/index.css">
+  <script src="https://kit.fontawesome.com/064a55beb6.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+  
+  
   <title>DASOM CHO</title>
 </head>
-<style>
-  body{background-color: var(--main-blue);}
-  header{border-bottom:1px solid #ccc; padding:20px 0; }
-  .header_inner{
-    width:1200px;
-    margin:0 auto;
-    display:flex;
-    align-items: center;
-    
-  }
-  nav{align-self: center;}
-
-</style>
 <body>
   <div class="wrapper">
-    <header>
+    <header class="">
       <div class="header_inner">
-        <h1>로고</h1>
+        <h1><img src="./img/logoDC.png" alt=""></h1>
         <nav>
-          <a href="">About</a>
-          <a href="">Skills</a>
-          <a href="">Project</a>
-          <a href="">Contact</a>
+          <a href="#about">About</a>
+          <a href="#project">Project</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
         </nav>
+        <div class="sub_icons">
+          <a href="#"><i class="fa-brands fa-github"></i></a>
+          <a href="#"><i class="fa-regular fa-envelope"></i></a>
+          <a href="#"><i class="fa-solid fa-globe"></i></a>
+        </div>
       </div>
     </header>
     <div class="container">
-      테이블 형식으로 이력서 /교육/ 포트폴리오/ 기술경력/사용언어
+      <!-- INTRO -->
+      <div class="intro">
+        <p class="profile">
+          <span class="frame"></span>
+          <img src="./img/dasom35.png" alt="프로필이미지">
+        </p>
+        <p class="helloworld">
+          안녕하세요<br>
+          재밌고 건강한 <span class="fc_point">아이디어</span>를 <br>
+          <span class="fc_point">사용가능한 서비스</span>로 <br>
+          실현하는 과정을 즐기는 <sapn class="fc_point">주니어 백엔드 개발자</sapn> <br>
+          <span class="fc_point">조다솜</span> 입니다
+        </p>
+        
+      </div>
+      <!-- ABOUT : 교육, 경력, 기타사항 프로그램에 대한 신념 -->
+      <div id="about" class="about">
+        <h2>About</h2>
+        <div>
+          <p class="about_sub_title"><i class="fa-regular fa-heart"></i>&nbsp;&nbsp;가치관</p>
+          <div class="value">
+            <p>모든 사람이 편안하게 서비스를 즐길 수 있는 경험을 만드는 개발자가 되고 싶습니다.</p>
+            <p>기술이 지위와 경제의 간극을 줄여준다고 믿습니다.</p>
+            <p>지속 가능한 개발을 추구합니다.</p>
+          </div>
+        </div>
+        <div>
+          <p class="about_sub_title"><i class="fa-solid fa-book-open"></i>&nbsp;&nbsp;교육</p>
+          <table>
+            <tr>
+              <td>
+                <p class="pb10">JAVA/SPRING 기반 웹개발자 양성과정 </p>
+                <span class="fc_less">2022. 08 ~ 2022.12 (790시간)</span>
+                <span class="fc_less">한국소프트웨어기술진흥협회</span>
+              </td>
+              <td>
+                <div>
+                  <p><i class="fa-solid fa-check"></i> JAVA</p>
+                  <p>Java의 가장 큰 특징인 객체지향을 이해하고 이를 활용하여 프로그래밍 합니다.</p>
+                </div>
+                <div>
+                  <p><i class="fa-solid fa-check"></i> Spring/Spring boot</p>
+                  <p>웹서비스 개발에 필요한 다양한 기능을 활용하여 서비스를 구축합니다. (Srping Security, AOP)</p>
+                </div>
+                <div>
+                  <p><i class="fa-solid fa-check"></i> SQL / Oracle</p>
+                  <p>
+                    서비스에 필요한 요구사항을 도출하여 데이터베이스로 구체화 합니다. Oracle을 사용하여 웹서비스에 필요한 DB를 마련합니다.
+                  </p>
+                </div>
+              </td>
+            </tr>
+            <!-- FE -->
+            <tr>
+              <td>
+                <p class="pb10">UI UX 프론트엔드 개발자 양성과정</p>
+                <span class="fc_less">2020. 10 ~ 2021. 04 (800시간)</span>
+                <span class="fc_less">그린아카데미</span>
+              </td>
+              <td>
+                <div>
+                  <p><i class="fa-solid fa-check"></i> HTML</p>
+                  <p>웹접근성, 웹표준을 준수한 마크업으로 모든 사용자가 편안하고 쉽게 컨텐츠를 소비 할 수 있도록 합니다. </p>
+                </div>
+                <div>
+                  <p><i class="fa-solid fa-check"></i> CSS</p>
+                  <p>크로스 브라우징과 Media Query를 사용하여 모든 기기에서 같은 서비스를 제공합니다.</p>
+                </div>
+                <div>
+                  <p><i class="fa-solid fa-check"></i> Java Script / Jquery</p>
+                  <p>Java Script와 Jqeuery를 활용하여 interactive한 웹개발을 합니다. ajax를 이용하여 비동기적인 웹페이지를 제작합니다.</p>
+                </div>
+                <div>
+                  <p><i class="fa-solid fa-check"></i> PHP</p>
+                  <p>PHP를 활용하여 웹서비스의 기본적인 회원가입, 로그인, 세션, CRUD를 구현합니다/</p>
+                </div>
+                <div>
+                  <p><i class="fa-solid fa-check"></i> CSS</p>
+                  <p>크로스 브라우징과 Media Query를 사용하여 모든 기기에서 같은 서비스를 제공합니다.</p>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- 프로젝트 -->
+      <div id="project" class="project">
+        <h2>Project</h2>
+        <div class="project_slick">
+          <div class="project_card">
+            <div class="proj_img"><img src="./img/pro_pet.png" alt="프로젝트이미지"/></div>
+            <div class="proj_desc">
+              <div class="title">
+                <p class="fc_point">Stdudy Project</p>
+                <p>펫트너</p>
+              </div>
+              <div class="desc">
+                반려동물 돌봄 서비스 플랫폼
+              </div>
+              <div class="skills_info">
+                <div class="skills">
+                  <p>Java</p>
+                  <p>Spring</p>
+                  <p>Oracle</p>
+                  <p>Java Script</p>
+                  <p>API</p>
+                </div>
+                <div class="info_link">
+                  <a href=""><i class="fa-brands fa-github"></i> github</a>
+                  <a href=""><i class="fa-solid fa-up-right-from-square"></i> 프로젝트 보기</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project_card">
+            <div class="proj_img"><img src="./img/pro_t2.png" alt="프로젝트이미지"/></div>
+            <div class="proj_desc">
+              <div class="title">
+                <p class="fc_point">Stdudy Project</p>
+                <p>차(Tea) 쇼핑</p>
+              </div>
+              <div class="desc">
+                PC, Tablet, Mobile 반응형 사이트 제작
+              </div>
+              <div class="skills_info">
+                <div class="skills">
+                  <p>Java</p>
+                  <p>Spring</p>
+                  <p>Oracle</p>
+                  <p>Java Script</p>
+                  <p>API</p>
+                </div>
+                <div class="info_link">
+                  <a href=""><i class="fa-brands fa-github"></i> github</a>
+                  <a href=""><i class="fa-solid fa-up-right-from-square"></i> 프로젝트 보기</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project_card">
+            <div class="proj_img"><img src="./img/pro_t2.png" alt="프로젝트이미지"/></div>
+            <div class="proj_desc">
+              <div class="title">
+                <p class="fc_point">Stdudy Project</p>
+                <p>대나무숲 앱</p>
+              </div>
+              <div class="desc">
+                Flutter를 이용하여 기본적인 CRUD 게시판을 제작
+              </div>
+              <div class="skills">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- SKILLS // 이미지 차트로 -->
+      <div id="skills" class="skills">
+        <h2>Skills</h2>
+        <table>
+          <tr>
+            <td>Backend</td>
+            <td>
+              <p>Java</p>
+              <p>Spring</p>
+              <p>PHP</p>
+              <p>Code Igniter</p>
+              <p>Orcale, Mysql</p>
+            </td>
+          </tr>
+          <tr>
+            <td>Frontend</td>
+            <td>
+              <p>Html5</p>
+              <p>CSS3</p>
+              <p>Java Script (ES6+)</p>
+            </td>
+          </tr>
+          <tr>
+            <td>tools</td>
+            <td>
+              <p>Git</p>
+              <p>Eclisps</p>
+              <p>Slack/ Notion </p>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Contact -->
+      <div id="contact" class="contact">
+        <h2>contact</h2>
+        <form action="">
+          <div>
+            <p>Email</p>
+            <input type="text" placeholder="회신받을 메일을 입력해주세요">
+          </div>
+          <div>
+            <p>Message</p>
+            <textarea name=""></textarea>
+          </div>
+          <p class="send_msg">메시지보내기</p>
+        </form>
+      </div>
+      
     </div>
-    <footer>footer</footer>
+    <footer>포트폴리오 조다솜 | &#169; Copyright 2022</footer>
   </div>
 </body>
 </html>
+
+<style>
+ 
+</style>
+
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+  ScrollTrigger.matchMedia({
+    "all": function(){
+      gsap.from(".container .intro .profile", {y:-100,  duration:2, opacity:0});
+      gsap.from(".container .intro .helloworld", {y:100,  duration:2, opacity:0});
+
+    }
+  })
+
+  $(document).ready(function(){
+   
+    $('nav > a').click(function (){
+    	$('html, body').animate({scrollTop: $(this.hash).offset.top}, 300);
+    });
+
+    // Header script 스크롤 되면 상단에 고정한다
+    $(window).scroll(function(){  
+      var scrollVal = $(this).scrollTop()*10;
+
+      if(scrollVal > 520){
+        $("header").addClass("fixed");
+      }else{
+        $("header").removeClass("fixed");
+      }
+    });  
+  })
+</script>
+
+<style>
+  header{}
+
+  header.fixed{
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(255 255 255 / 90%);
+    padding: 10px 0;
+  }
+  header.fixed .sub_icons{color:var(--font-blue)}
+</style>

@@ -1,0 +1,254 @@
+body{background-color: var(--main-blue); color:var(--font-white)}
+header{padding:30px 0; }
+.header_inner{
+  width:1200px;
+  margin:0 auto;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+h1{width:45px}
+h1 img{width: 100%;}
+nav{
+  color:var(--font-blue);
+  display: flex;
+  gap:15px
+}
+
+nav a{
+  position:relative;
+  padding:2px 8px;
+}
+
+nav a:before{
+  content: "";
+  background-color: #FAC748;
+  width: 100%;
+  height: 0%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  transition: 0.7s;
+}
+
+nav a:before{
+  width: 0;
+  height: 100%;
+}
+
+nav a:hover::before{
+  width: 100%;
+}
+
+header .sub_icons{
+  font-size:1.6rem;
+  display:flex;
+  gap:20px;
+}
+
+
+/* container area */
+.container > div {width:1200px; margin:0 auto; padding:80px 0;}
+h2{    
+  font-size: 2rem;
+  border-bottom: 2px solid;
+  display: inline-block;
+  padding: 0 20px 6px 0px;
+  margin-bottom:20px;
+}
+
+.container .intro{
+  font-size: 2.3rem;
+  line-height: 4.2rem;
+  display: flex;
+  gap:80px;
+  justify-content: center;
+  align-items: center;
+}
+.container .intro .profile{
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+.container .intro .profile .frame{
+  width: 200px;
+  height: 200px;
+  border: 4px solid var(--font-blue);
+  position: absolute;
+  top: -16px;
+  left: -16px;
+  z-index: -1;
+}
+
+
+
+/* TABLE */
+table{
+  width: 100%;
+}
+table td{
+  padding:35px 0;
+  border-bottom:1px solid var(--font-grey)
+}
+table td:first-child{
+  width: 180px;
+  text-align: left;
+  vertical-align: top;
+}
+table td:nth-child(2){
+  font-weight:100; 
+  line-height: 24px;
+}
+
+.about > div:not(:last-child){
+  /* background-color: tan; */
+  padding-bottom:60px;
+}
+
+.about .value{
+  padding-top:30px;
+  line-height: 24px;
+}
+.about .about_sub_title{
+  padding-top:15px;
+}
+
+
+.about table td div:not(:last-child){padding-bottom:20px;}
+.about table td:nth-child(1){width:auto; padding-right:50px;}
+
+.about table td:nth-child(2) p:nth-child(1){font-weight: 900;}
+
+.about table td:nth-child(2) p:nth-child(2){
+  padding: 3px 0 0 28px;
+}
+
+.fa-check:before {
+  content: "\f00c";
+  color:var(--font-blue);
+  margin-right: 8px;
+}
+
+
+.project .project_card{
+  display: flex;
+  gap: 20px;
+  height:200px;
+  margin-bottom:30px;
+  background-color: #17203A;
+  overflow: hidden;
+}
+.project .project_card:nth-child(2){
+  background-color: #3e4a6d;
+}
+
+.project .proj_img{
+  background-color: #BFDBFE;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.project .proj_desc{
+  padding:30px 20px;
+}
+.project .proj_desc .title{padding-bottom:20px; display:flex; gap:10px; flex-direction: column;}
+.project .proj_desc .title p:nth-child(1){
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.project .proj_desc .title p:nth-child(2){font-size:2rem}
+.project .proj_desc .desc{color:#969fbe}
+
+.project .proj_desc .skills_info{
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  min-width: 600px;
+  align-items: center;
+}
+.project .proj_desc .skills{
+  display: flex;
+  gap: 10px;
+}
+.project .proj_desc .skills p, .info_link a{
+  font-size: 1.2rem;
+  padding: 6px 8px 9px;
+  background-color: #070c17;
+  background-color: #eee;
+  color:var(--font-black);
+ 
+}
+.project .proj_desc .skills img{width: 20px;}
+.project .proj_desc .info_link{
+  display: flex;
+  gap:10px;
+}
+
+
+/*  */
+.fc_point{color:var(--font-blue); font-weight: 600;}
+.fc_less{
+  font-size:1.3rem;
+  font-weight: 100;
+  color:var(--font-white)
+}
+
+/* CONTACT */
+.contact{}
+.contact form{
+  padding-top:30px;
+  width: 500px;
+  display: flex;
+  gap:35px;
+  flex-direction: column;
+}
+.contact form p{
+  padding-bottom: 10px;
+  color:var(--font-blue)
+}
+
+.contact input, textarea{
+  color:var(--font-white);
+  width: 100%;;
+  background-color: transparent;
+  border:1px solid var(--font-blue);
+  resize: none;
+  outline:0;
+  font-family: inherit;
+}
+
+.contact input{
+  height: 40px;
+  text-indent: 10px;
+}
+.contact textarea{
+  height: 200px;
+  color:#fff;
+  padding:20px 10px;
+  box-sizing: border-box;
+}
+.contact .send_msg{
+  font-size: 1.4rem;
+  cursor: pointer;
+  background: var(--font-blue);
+  display: inline;
+  width: fit-content;
+  padding: 12px;
+  color: #fff;
+  align-self: flex-end;
+}
+
+footer{
+  width: 1200px;
+  margin: 0 auto;
+  border-top: 1px solid;
+  padding: 30px 0;
+  margin-top: 40px;
+  font-size: 1.3rem;
+  color: var(--font-grey);
+  text-align: right;
+}
+
+.pb10{padding-bottom:10px;}
