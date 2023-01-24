@@ -27,7 +27,7 @@
           <a href="#contact">Contact</a>
         </nav>
         <div class="sub_icons">
-          <a href="#"><i class="fa-brands fa-github"></i></a>
+          <a href="https://github.com/DasomDev"><i class="fa-brands fa-github"></i></a>
           <a href="#"><i class="fa-regular fa-envelope"></i></a>
           <a href="#"><i class="fa-solid fa-globe"></i></a>
         </div>
@@ -52,7 +52,7 @@
       <!-- ABOUT : 교육, 경력, 기타사항 프로그램에 대한 신념 -->
       <div id="about" class="about">
         <h2>About</h2>
-        <div>
+        <div class="row1">
           <p class="about_sub_title"><i class="fa-regular fa-heart"></i>&nbsp;&nbsp;가치관</p>
           <div class="value">
             <p>모든 사람이 편안하게 서비스를 즐길 수 있는 경험을 만드는 개발자가 되고 싶습니다.</p>
@@ -60,7 +60,7 @@
             <p>지속 가능한 개발을 추구합니다.</p>
           </div>
         </div>
-        <div>
+        <div class="row2">
           <p class="about_sub_title"><i class="fa-solid fa-book-open"></i>&nbsp;&nbsp;교육</p>
           <table>
             <tr>
@@ -119,7 +119,6 @@
           </table>
         </div>
       </div>
-
       <!-- 프로젝트 -->
       <div id="project" class="project">
         <h2>Project</h2>
@@ -143,8 +142,8 @@
                   <p>API</p>
                 </div>
                 <div class="info_link">
-                  <a href=""><i class="fa-brands fa-github"></i> github</a>
-                  <a href=""><i class="fa-solid fa-up-right-from-square"></i> 프로젝트 보기</a>
+                  <a href="https://github.com/DasomDev/petner-dc" target="_blank"><i class="fa-brands fa-github"></i> github</a>
+                  <!-- <a href=""><i class="fa-solid fa-up-right-from-square"></i> 프로젝트 보기</a> -->
                 </div>
               </div>
             </div>
@@ -174,24 +173,8 @@
               </div>
             </div>
           </div>
-          <div class="project_card">
-            <div class="proj_img"><img src="./img/pro_t2.png" alt="프로젝트이미지"/></div>
-            <div class="proj_desc">
-              <div class="title">
-                <p class="fc_point">Stdudy Project</p>
-                <p>대나무숲 앱</p>
-              </div>
-              <div class="desc">
-                Flutter를 이용하여 기본적인 CRUD 게시판을 제작
-              </div>
-              <div class="skills">
-                
-              </div>
-            </div>
-          </div>
         </div>
       </div>
-      
       <!-- SKILLS // 이미지 차트로 -->
       <div id="skills" class="skills">
         <h2>Skills</h2>
@@ -224,7 +207,6 @@
           </tr>
         </table>
       </div>
-
       <!-- Contact -->
       <div id="contact" class="contact">
         <h2>contact</h2>
@@ -248,7 +230,8 @@
 </html>
 
 <style>
- 
+/* .about{border-top:1px solid green} */
+
 </style>
 
 <script>
@@ -257,6 +240,30 @@
     "all": function(){
       gsap.from(".container .intro .profile", {y:-100,  duration:2, opacity:0});
       gsap.from(".container .intro .helloworld", {y:100,  duration:2, opacity:0});
+
+      gsap.from(".container .about h2", {
+				scrollTrigger: {
+						trigger: ".container .about h2",
+					  start: "top 80%"
+				}
+				, opacity: 0
+				, y : -40
+				, duration:1.4
+				, ease: "back"
+			})
+
+      gsap.from(".container .about .row1", {
+				scrollTrigger: {
+						trigger: ".container .about .row1",
+            //markers: true,
+					  start: "top 80%"
+				}
+        , delay: 0.4
+				, opacity: 0
+				, y : -40
+				, duration:1.4
+				, ease: "back"
+			})
 
     }
   })
@@ -279,18 +286,3 @@
     });  
   })
 </script>
-
-<style>
-  header{}
-
-  header.fixed{
-    z-index: 10;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: rgb(255 255 255 / 90%);
-    padding: 10px 0;
-  }
-  header.fixed .sub_icons{color:var(--font-blue)}
-</style>
