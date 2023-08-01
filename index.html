@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <link rel="stylesheet" href="/css/common.css">
   <link rel="stylesheet" href="/css/index.css">
   <script src="https://kit.fontawesome.com/064a55beb6.js" crossorigin="anonymous"></script>
@@ -44,9 +45,9 @@
           안녕하세요<br>
           주니어 <span class="fc_point">웹 개발자 조다솜</span>입니다<br>
           사용자들에게 <span class="fc_point">긍정적인 영향</span>을 주는<br>
-          <span class="fc_point">재미있고 건강한 웹서비스</span>를 만들기 위해 열정을 쏟고 있으며,<br>
-          문제를 해결하는 과정에서의 즐거움을 느낍니다<br>
-          새로운 기술을 익히며 <span class="fc_point">지식을 확장</span>하는 것을 좋아하고,<br>
+          서비스를 만들기 위해 열정을 쏟고 있으며,<br>
+          <span class="fc_point">문제를 해결하는 과정</span>에서의 즐거움을 느낍니다<br>
+          새로운 기술을 익히고 <span class="fc_point">지식을 확장</span>하는 것을 좋아하며,<br>
           효율적인 코드와 시스템을 구축하여 사람들에게<br>
           <sapn class="fc_point">실질적인 가치</sapn>를 제공하고자 합니다<br>        
         </div>
@@ -123,6 +124,39 @@
           </table>
         </div>
       </div>
+      
+      <!-- SKILLS // 이미지 차트로 -->
+      <div id="skills" class="skills">
+        <h2>Skills</h2>
+        <table>
+          <tr>
+            <td>Backend</td>
+            <td>
+              <p>Java</p>
+              <p>Spring</p>
+              <p>PHP</p>
+              <p>Code Igniter</p>
+              <p>Orcale, Mysql</p>
+            </td>
+          </tr>
+          <tr>
+            <td>Frontend</td>
+            <td>
+              <p>Html5</p>
+              <p>CSS3</p>
+              <p>Java Script (ES6+)</p>
+            </td>
+          </tr>
+          <tr>
+            <td>tools</td>
+            <td>
+              <p>Git</p>
+              <p>Eclisps</p>
+              <p>Slack/ Notion </p>
+            </td>
+          </tr>
+        </table>
+      </div>
       <!-- 프로젝트 -->
       <div id="project" class="project">
         <h2>Project</h2>
@@ -179,38 +213,6 @@
           </div>
         </div>
       </div>
-      <!-- SKILLS // 이미지 차트로 -->
-      <div id="skills" class="skills">
-        <h2>Skills</h2>
-        <table>
-          <tr>
-            <td>Backend</td>
-            <td>
-              <p>Java</p>
-              <p>Spring</p>
-              <p>PHP</p>
-              <p>Code Igniter</p>
-              <p>Orcale, Mysql</p>
-            </td>
-          </tr>
-          <tr>
-            <td>Frontend</td>
-            <td>
-              <p>Html5</p>
-              <p>CSS3</p>
-              <p>Java Script (ES6+)</p>
-            </td>
-          </tr>
-          <tr>
-            <td>tools</td>
-            <td>
-              <p>Git</p>
-              <p>Eclisps</p>
-              <p>Slack/ Notion </p>
-            </td>
-          </tr>
-        </table>
-      </div>
       <!-- Contact -->
       <div id="contact" class="contact">
         <h2>contact</h2>
@@ -225,10 +227,9 @@
           </div>
           <p class="send_msg">메시지보내기</p>
         </form>
-      </div>
-      
+      </div>      
     </div>
-    <footer>포트폴리오 조다솜 | &#169; Copyright 2022</footer>
+    <footer>포트폴리오 조다솜 | &#169; Copyright 2023</footer>
   </div>
 </body>
 </html>
@@ -267,7 +268,20 @@
 				, y : -40
 				, duration:1.4
 				, ease: "back"
-			})
+			});
+
+      gsap.from(".container .about .row2 tr", {
+				scrollTrigger: {
+						trigger: ".container .about .row2",
+            //markers: true,
+					  start: "top 80%"
+				}
+        , delay: 0.4
+				, opacity: 0
+				, y : -40
+				, duration:1.4
+				, ease: "back"
+			});
 
     }
   })
