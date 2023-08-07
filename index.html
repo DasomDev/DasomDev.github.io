@@ -159,7 +159,7 @@
             </td>
           </tr>
           <tr>
-            <td>tools</td>
+            <td>Tools</td>
             <td>
               <p>Git</p>
               <p>Eclisps</p>
@@ -255,12 +255,13 @@
   ScrollTrigger.matchMedia({
     "all": function(){
       gsap.from(".container .intro .profile", {y:-100,  duration:2, opacity:0});
-      gsap.from(".container .intro .helloworld", {y:100,  duration:2, opacity:0});
+      gsap.from(".container .intro .helloworld", {y:-50,  duration:2, opacity:0, delay:0.5});
 
       gsap.from(".container .about h2", {
 				scrollTrigger: {
 						trigger: ".container .about h2",
-					  start: "top 80%"
+					  start: "top",
+            markers:true
 				}
 				, opacity: 0
 				, y : -40
@@ -281,9 +282,10 @@
 				, ease: "back"
 			});
 
-      gsap.from(".container .about .row2 tr", {
+     
+      gsap.from(".container .about .row2 tr:nth-child(1)", {
 				scrollTrigger: {
-						trigger: ".container .about .row2",
+						trigger: ".container .about .row2 tr:nth-child(1)",
             //markers: true,
 					  start: "top 80%"
 				}
@@ -293,6 +295,21 @@
 				, duration:1.4
 				, ease: "back"
 			});
+
+      gsap.from(".container .about .row2 tr:nth-child(2)", {
+				scrollTrigger: {
+						trigger: ".container .about .row2 tr:nth-child(2)",
+            //markers: true,
+					  start: "top 80%"
+				}
+        , delay: 0.4
+				, opacity: 0
+				, y : -40
+				, duration:1.4
+				, ease: "back"
+			});
+
+      
 
     }
   })
@@ -309,8 +326,10 @@
 
       if(scrollVal > 520){
         $("header").addClass("fixed");
+        $(".wrapper").css({"padding-top":"92px"})
       }else{
         $("header").removeClass("fixed");
+        $(".wrapper").css({"padding-top":"0"})
       }
     });  
   })
