@@ -28,8 +28,8 @@
           <!-- <a href="#contact">Contact</a> -->
         </nav>
         <div class="sub_icons">
-          <a href="https://github.com/DasomDev"><i class="fa-brands fa-github"></i></a>
-          <a href="#"><i class="fa-regular fa-envelope"></i></a>
+          <a style="color:var(--font-blue)" href="https://github.com/DasomDev"><i class="fa-brands fa-github"></i></a>
+          <!-- <a href="#"><i class="fa-regular fa-envelope"></i></a> -->
           <!-- <a href="#"><i class="fa-solid fa-globe"></i></a> -->
         </div>
       </div>
@@ -171,6 +171,31 @@
         <h2>Project</h2>
         <div class="project_slick">
           <div class="project_card">
+            <div class="proj_img"><img src="./img/pro_t2.png" alt="프로젝트이미지"/></div>
+            <div class="proj_desc">
+              <div class="title">
+                <p class="fc_point">Personal Project</p>
+                <p>차(Tea) 쇼핑몰</p>
+              </div>
+              <div class="desc">
+                PC, Tablet, Mobile 반응형 사이트 제작. PHP를 사용하여 회원가입, 로그인 구현 
+              </div>
+              <div class="skills_info">
+                <div class="skills">
+                  <p>Java Script</p>
+                  <p>PHP</p>
+                  <p>MariaDB</p>
+                  <p>Responsive Web</p>
+                </div>
+                <div class="info_link">
+                  <!-- <a href=""><i class="fa-brands fa-github"></i> github</a> -->
+                  <a href="http://dasomdev.dothome.co.kr/t2" target="_blank"><i class="fa-solid fa-up-right-from-square"></i> 프로젝트 보기</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project_card">
             <div class="proj_img" style="background-color: #6ed3c1;"><img src="./img/pro_au1.png" alt="프로젝트이미지"/></div>
             <div class="proj_desc">
               <div class="title">
@@ -193,30 +218,7 @@
               </div>
             </div>
           </div>
-          <div class="project_card">
-            <div class="proj_img"><img src="./img/pro_t2.png" alt="프로젝트이미지"/></div>
-            <div class="proj_desc">
-              <div class="title">
-                <p class="fc_point">Personal Project</p>
-                <p>차(Tea) 쇼핑</p>
-              </div>
-              <div class="desc">
-                PC, Tablet, Mobile 반응형 사이트 제작. PHP를 사용하여 회원가입, 로그인 구현 
-              </div>
-              <div class="skills_info">
-                <div class="skills">
-                  <p>Java Script</p>
-                  <p>PHP</p>
-                  <p>MariaDB</p>
-                  <p>Responsive Web</p>
-                </div>
-                <div class="info_link">
-                  <!-- <a href=""><i class="fa-brands fa-github"></i> github</a> -->
-                  <a href="http://dasomdev.dothome.co.kr/t2" target="_blank"><i class="fa-solid fa-up-right-from-square"></i> 프로젝트 보기</a>
-                </div>
-              </div>
-            </div>
-          </div>
+          
           <div class="project_card">
             <div class="proj_img"><img src="./img/pro_pet.png" alt="프로젝트이미지"/></div>
             <div class="proj_desc">
@@ -275,6 +277,7 @@
 
 <script>
   gsap.registerPlugin(ScrollTrigger);
+  
   ScrollTrigger.matchMedia({
     "all": function(){
       gsap.from(".container .intro .profile", {y:-100,  duration:2, opacity:0});
@@ -292,7 +295,7 @@
 				, ease: "back"
 			})
 
-      gsap.from(".container .about .row1", {
+      gsap.to(".container .about .row1", {
 				scrollTrigger: {
 						trigger: ".container .about .row1",           
 					  start: "30px 80%"
