@@ -303,7 +303,6 @@ footer{
       flex: 1;
       justify-content: flex-end;
       color:var(--font-blue);
-      padding-top:10px;
     }
     nav{
       flex-grow: 1;
@@ -377,6 +376,10 @@ footer{
       height: 150px;
       overflow: hidden;
       box-shadow: 5px 5px 0px 0 var(--font-blue);
+    }
+
+    .project .proj_desc .desc{
+      line-height: 20px;
     }
 
     .project .proj_desc .skills{
