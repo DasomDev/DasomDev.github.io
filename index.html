@@ -1,384 +1,532 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <link rel="stylesheet" href="/css/common.css">
-  <link rel="stylesheet" href="/css/index.css">
-  <script src="https://kit.fontawesome.com/064a55beb6.js" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
-  
-  
-  <title>DASOM CHO</title>
-</head>
-<body>
-  <div class="wrapper">
-    <header>
-      <div class="header_inner">
-        <h1><img src="./img/logoDC.png" alt=""></h1>
-        <nav>
-          <a href="#about">About</a>
-          <a href="#project">Project</a>
-          <a href="#skills">Skills</a>
-          <!-- <a href="#contact">Contact</a> -->
-        </nav>
-        <div class="sub_icons">
-          <a style="color:var(--font-blue)" href="https://github.com/DasomDev"><i class="fa-brands fa-github"></i></a>
-          <!-- <a href="#"><i class="fa-regular fa-envelope"></i></a> -->
-          <!-- <a href="#"><i class="fa-solid fa-globe"></i></a> -->
-        </div>
-      </div>
-    </header>
-    <div class="container">
-      <!-- INTRO -->
-      <div class="intro">
-        <p class="profile">
-          <span class="frame"></span>
-          <img src="./img/dasom35.png" alt="프로필이미지">
-        </p>
-        <div class="helloworld">
-          안녕하세요<br>
-          주니어 <span class="fc_point">웹 개발자 조다솜</span>입니다.<br>
-          사용자들에게 <span class="fc_point">긍정적인 영향</span>을 주는<br>
-          서비스를 만들기 위해 열정을 쏟고 있으며,<br>
-          <span class="fc_point">문제를 해결하는 과정</span>에서의 즐거움을 느낍니다.<br>
-        </div>
-        
-      </div>
-      <!-- ABOUT : 교육, 경력, 기타사항 프로그램에 대한 신념 -->
-      <div id="about" class="about">
-        <h2>About</h2>
-        <div class="row1">
-          <p class="about_sub_title"><i class="fa-regular fa-heart"></i>&nbsp;&nbsp;가치관</p>
-          <div class="value">
-            <p>기술이 지위와 경제의 간극을 줄여준다고 믿습니다.</p>
-            <p>모든 사람이 편안하게 서비스를 즐길 수 있는 경험을 만들고 싶습니다.</p>
-            <p>협업과 팀워크를 중요시하며, 다양한 배경과 역할을 가진 팀원들과 함께 성장하는 경험을 소중히 여깁니다.</p>
-            <p>새로운 기술을 익히고 지식을 확장하는 것을 좋아하며, 효율적인 코드와 시스템을 구축하여 사람들에게 실질적인 가치를 제공하고자 합니다.</p>
-            <p>지속적인 개선과 혁신을 통해 사용자들에게 긍정적인 변화를 선사하는 개발자가 되고자 합니다.</p>
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <script
+      src="https://kit.fontawesome.com/064a55beb6.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.js"
+      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+
+    <title>DASOM CHO</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="header_inner">
+          <h1><img src="./img/logoDC.png" alt="" /></h1>
+          <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#project">Project</a>
+            <!-- <a href="#contact">Contact</a> -->
+          </nav>
+          <div class="sub_icons">
+            <a
+              style="color: var(--font-blue)"
+              href="https://github.com/DasomDev"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <!-- <a href="#"><i class="fa-regular fa-envelope"></i></a> -->
+            <!-- <a href="#"><i class="fa-solid fa-globe"></i></a> -->
           </div>
         </div>
-        <div class="row2">
-          <p class="about_sub_title"><i class="fa-solid fa-book-open"></i>&nbsp;&nbsp;교육</p>
+      </header>
+      <div class="container">
+        <!-- INTRO -->
+        <div class="intro">
+          <p class="profile">
+            <span class="frame"></span>
+            <img src="./img/dasom35.png" alt="프로필이미지" />
+          </p>
+          <div class="hello">
+            <div class="helloworld">
+              안녕하세요<br />
+              주니어 <span class="fc_point">웹 개발자 조다솜</span>입니다.<br />
+              사용자들에게 <span class="fc_point">긍정적인 영향</span>을 주는<br />
+              서비스를 만들기 위해 열정을 쏟고 있으며,<br />
+              <span class="fc_point">문제를 해결하는 과정</span>에서의 즐거움을
+              느낍니다.<br />
+            </div>
+            <div class="helloworld_en">
+              Hello<br />
+              I'm Dasom Cho, a junior web developer.<br />
+              I'm all about building services that
+              <span class="fc_point">truly matter to users.</span><br />
+              I'm passionate about
+              <span class="fc_point">problem-solving</span> and find real
+              satisfaction in <span class="fc_point">overcoming challenges</span
+              ><br />
+            </div>
+          </div>
+        </div>
+        <!-- ABOUT : 교육, 경력, 기타사항 프로그램에 대한 신념 -->
+        <div id="about" class="about">
+          <h2>About</h2>
+          <div class="row1">
+            <p class="about_sub_title">
+              <i class="fa-regular fa-heart"></i>&nbsp;&nbsp;가치관
+            </p>
+            <div class="value">
+              <p>기술이 지위와 경제의 간극을 줄여준다고 믿습니다.</p>
+              <p>
+                모든 사람이 편안하게 서비스를 즐길 수 있는 경험을 만들고
+                싶습니다.
+              </p>
+              <p>
+                협업과 팀워크를 중요시하며, 다양한 배경과 역할을 가진 팀원들과
+                함께 성장하는 경험을 소중히 여깁니다.
+              </p>
+              <p>
+                새로운 기술을 익히고 지식을 확장하는 것을 좋아하며, 효율적인
+                코드와 시스템을 구축하여 사람들에게 실질적인 가치를 제공하고자
+                합니다.
+              </p>
+              <p>
+                지속적인 개선과 혁신을 통해 사용자들에게 긍정적인 변화를
+                선사하는 개발자가 되고자 합니다.
+              </p>
+            </div>
+          </div>
+          <div class="row2">
+            <p class="about_sub_title">
+              <i class="fa-solid fa-book-open"></i>&nbsp;&nbsp;교육
+            </p>
+            <table>
+              <tr>
+                <td>
+                  <p class="pb10">JAVA/SPRING 기반 웹개발자 양성과정</p>
+                  <span class="fc_less">2022. 08 ~ 2022.12 (790시간)</span>
+                  <span class="fc_less">한국소프트웨어기술진흥협회</span>
+                </td>
+                <td>
+                  <div>
+                    <p><i class="fa-solid fa-check"></i> JAVA</p>
+                    <p>
+                      Java의 핵심인 객체지향 프로그래밍 개념을 이해하고 이를
+                      실제 프로그래밍에 적용할 수 있습니다<br />
+                      객체지향적 사고로 코드를 설계하고 개발하여 유지보수성이
+                      높은 소프트웨어를 만듭니다
+                    </p>
+                  </div>
+                  <div>
+                    <p><i class="fa-solid fa-check"></i> Spring/Spring boot</p>
+                    <p>
+                      Spring 및 Spring Boot 프레임워크를 활용하여 다양한 기능을
+                      효과적으로 활용하여 웹 서비스를 구축할 수 있습니다<br />
+                      Spring Security를 통한 보안 강화와 AOP(관점 지향
+                      프로그래밍)를 활용하여 로깅 및 트랜잭션 관리와 같은
+                      측면에서 서비스 품질을 높일 수 있습니다
+                    </p>
+                  </div>
+                  <div>
+                    <p><i class="fa-solid fa-check"></i> SQL / Oracle</p>
+                    <p>
+                      요구사항을 분석하여 데이터베이스를 설계하고 구축하는
+                      작업을 통해 서비스에 필요한 데이터를 효율적으로
+                      관리합니다<br />
+                      Oracle 데이터베이스를 사용하여 데이터를 안전하게 저장하고
+                      관리하며, 웹 서비스의 기반이 되는 중요한 역할을 수행합니다
+                    </p>
+                  </div>
+                </td>
+              </tr>
+              <!-- FE -->
+              <tr>
+                <td>
+                  <p class="pb10">UI UX 프론트엔드 개발자 양성과정</p>
+                  <span class="fc_less">2020. 10 ~ 2021. 04 (800시간)</span>
+                  <span class="fc_less">그린아카데미</span>
+                </td>
+                <td>
+                  <div>
+                    <p><i class="fa-solid fa-check"></i> HTML</p>
+                    <p>
+                      웹접근성과 웹표준을 준수하여 마크업을 수행합니다<br />
+                      모든 사용자가 편안하고 쉽게 컨텐츠를 소비할 수 있도록
+                      합니다
+                    </p>
+                  </div>
+                  <div>
+                    <p><i class="fa-solid fa-check"></i> CSS</p>
+                    <p>
+                      크로스 브라우징과 Media Query를 활용하여 모든 기기에서
+                      동일한 서비스를 제공합니다<br />
+                      다양한 환경에서 일관된 사용자 경험을 보장합니다
+                    </p>
+                  </div>
+                  <div>
+                    <p>
+                      <i class="fa-solid fa-check"></i> Java Script / Jquery
+                    </p>
+                    <p>
+                      JavaScript와 jQuery를 활용하여 인터랙티브한 웹 개발을
+                      진행합니다<br />
+                      Ajax를 활용하여 비동기적인 웹 페이지를 제작하며,
+                      사용자와의 원활한 상호작용을 구현합니다
+                    </p>
+                  </div>
+                  <div>
+                    <p><i class="fa-solid fa-check"></i> PHP</p>
+                    <p>
+                      PHP를 활용하여 웹 서비스의 기본적인 기능인 회원가입,
+                      로그인, 세션 관리, CRUD(Create, Read, Update, Delete)를
+                      구현합니다<br />
+                      데이터 관리와 사용자 인터페이스를 효율적으로 개발합니다
+                    </p>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <!-- SKILLS // 이미지 차트로 -->
+        <div id="skills" class="skills">
+          <h2>Skills</h2>
           <table>
             <tr>
+              <td>Frontend</td>
               <td>
-                <p class="pb10">JAVA/SPRING 기반 웹개발자 양성과정 </p>
-                <span class="fc_less">2022. 08 ~ 2022.12 (790시간)</span>
-                <span class="fc_less">한국소프트웨어기술진흥협회</span>
-              </td>
-              <td>
-                <div>
-                  <p><i class="fa-solid fa-check"></i> JAVA</p>
-                  <p>
-                    Java의 핵심인 객체지향 프로그래밍 개념을 이해하고 이를 실제 프로그래밍에 적용할 수 있습니다<br>
-                    객체지향적 사고로 코드를 설계하고 개발하여 유지보수성이 높은 소프트웨어를 만듭니다
-                  </p>
-                </div>
-                <div>
-                  <p><i class="fa-solid fa-check"></i> Spring/Spring boot</p>
-                  <p>
-                    Spring 및 Spring Boot 프레임워크를 활용하여 다양한 기능을 효과적으로 활용하여 웹 서비스를 구축할 수 있습니다<br>
-                    Spring Security를 통한 보안 강화와 AOP(관점 지향 프로그래밍)를 활용하여 로깅 및 트랜잭션 관리와 같은 측면에서 서비스 품질을 높일 수 있습니다
-                  </p>
-                </div>
-                <div>
-                  <p><i class="fa-solid fa-check"></i> SQL / Oracle</p>
-                  <p>
-                    요구사항을 분석하여 데이터베이스를 설계하고 구축하는 작업을 통해 서비스에 필요한 데이터를 효율적으로 관리합니다<br>
-                    Oracle 데이터베이스를 사용하여 데이터를 안전하게 저장하고 관리하며, 웹 서비스의 기반이 되는 중요한 역할을 수행합니다
-                  </p>
-                </div>
+                <p><b>Java Script (ES6+)</b></p>
+                <p><b>Vue.js</b></p>
+                <p>Html5 (웹접근성 마크업)</p>
+                <p>CSS3, Tailwind</p>
+                <p>CSS3, Tailwind</p>
+                <p>Slick, GSAP(GreenSock Animation Platform), Chart.js</p>
               </td>
             </tr>
-            <!-- FE -->
             <tr>
+              <td>Backend</td>
               <td>
-                <p class="pb10">UI UX 프론트엔드 개발자 양성과정</p>
-                <span class="fc_less">2020. 10 ~ 2021. 04 (800시간)</span>
-                <span class="fc_less">그린아카데미</span>
+                <p>PHP</p>
+                <p>Code Igniter</p>
+                <p>Orcale, Mysql</p>
+                <p>Java</p>
+                <p>Spring</p>
               </td>
+            </tr>
+
+            <tr>
+              <td>Tools <br />& Technologies</td>
               <td>
-                <div>
-                  <p><i class="fa-solid fa-check"></i> HTML</p>
-                  <p>
-                    웹접근성과 웹표준을 준수하여 마크업을 수행합니다<br>
-                    모든 사용자가 편안하고 쉽게 컨텐츠를 소비할 수 있도록 합니다
-                  </p>
-                </div>
-                <div>
-                  <p><i class="fa-solid fa-check"></i> CSS</p>
-                  <p>크로스 브라우징과 Media Query를 활용하여 모든 기기에서 동일한 서비스를 제공합니다<br>
-                     다양한 환경에서 일관된 사용자 경험을 보장합니다</p>
-                </div>
-                <div>
-                  <p><i class="fa-solid fa-check"></i> Java Script / Jquery</p>
-                  <p>
-                    JavaScript와 jQuery를 활용하여 인터랙티브한 웹 개발을 진행합니다<br>
-                    Ajax를 활용하여 비동기적인 웹 페이지를 제작하며, 사용자와의 원활한 상호작용을 구현합니다
-                  </p>
-                </div>
-                <div>
-                  <p><i class="fa-solid fa-check"></i> PHP</p>
-                  <p>
-                    PHP를 활용하여 웹 서비스의 기본적인 기능인 회원가입, 로그인, 세션 관리, CRUD(Create, Read, Update, Delete)를 구현합니다<br> 데이터 관리와 사용자 인터페이스를 효율적으로 개발합니다
-                  </p>
-                </div>
+                <p>Git (Version Control)</p>
+                <p>Eclipse (IDE)</p>
+                <p>Slack (Communication)</p>
+                <p>Notion (Project Management)</p>
               </td>
             </tr>
           </table>
+          <p class="summary">
+            ✨ 저는 Vue.js와 JavaScript (ES6+)와 같은 최신 기술을 사용한
+            프론트엔드 개발을 전문으로 하고 있습니다.<br />
+            또한, PHP, CodeIgniter 및 Oracle과 MySQL과 같은 데이터베이스를
+            사용한 백엔드 개발 경험도 있습니다. 백엔드 개념에 대한 이해를
+            바탕으로 원활하고 효율적인 애플리케이션을 개발을 할 수 있습니다.
+          </p>
+          <p class="english">
+            ✨ I specialize in frontend development using modern technologies
+            like Vue.js and JavaScript (ES6+). Additionally, I have hands-on
+            experience with backend development, including working with PHP,
+            CodeIgniter, and databases such as Oracle and MySQL. My
+            understanding of backend concepts enhances my ability to create
+          </p>
         </div>
-      </div>      
-      <!-- SKILLS // 이미지 차트로 -->
-      <div id="skills" class="skills">
-        <h2>Skills</h2>
-        <table>
-          <tr>
-            <td>Backend</td>
-            <td>
-              <p>PHP</p>
-              <p>Code Igniter</p>
-              <p>Orcale, Mysql</p>
-              <p>Java</p>
-              <p>Spring</p>
-            </td>
-          </tr>
-          <tr>
-            <td>Frontend</td>
-            <td>
-              <p>Html5(웹접근성 준수)</p>
-              <p>CSS3, Tailwind</p>
-              <p>Java Script (ES6+)</p>
-              <p>Vue.js</p>
-            </td>
-          </tr>
-          <tr>
-            <td>Tools</td>
-            <td>
-              <p>Git</p>
-              <p>Eclisps</p>
-              <p>Slack/ Notion </p>
-            </td>
-          </tr>
-        </table>
-      </div>
-      <!-- 프로젝트 -->
-      <div id="project" class="project">
-        <h2>Project</h2>
-        <div class="project_slick">
-          <div class="project_card">
-            <div class="proj_img"><img src="./img/pro_t2.png" alt="프로젝트이미지"/></div>
-            <div class="proj_desc">
-              <div class="title">
-                <p class="fc_point">Personal Project</p>
-                <p>차(Tea) 쇼핑몰</p>
-              </div>
-              <div class="desc">
-                PC, Tablet, Mobile 반응형 사이트 제작. PHP를 사용하여 회원가입, 로그인 구현 
-              </div>
-              <div class="skills_info">
-                <div class="skills">
-                  <p>Java Script</p>
-                  <p>PHP</p>
-                  <p>MariaDB</p>
-                  <p>Responsive Web</p>
-                </div>
-                <div class="info_link">
-                  <!-- <a href=""><i class="fa-brands fa-github"></i> github</a> -->
-                  <a href="http://dasomdev.dothome.co.kr/t2" target="_blank"><i class="fa-solid fa-up-right-from-square"></i> 프로젝트 보기</a>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <div class="project_card" style="display:none">
-            <div class="proj_img" style="background-color: #6ed3c1;"><img src="./img/pro_au1.png" alt="프로젝트이미지"/></div>
-            <div class="proj_desc">
-              <div class="title">
-                <p class="fc_point">Personal Project</p>
-                <p>호주관광청</p>
+        <!-- 프로젝트 -->
+        <div id="project" class="project">
+          <h2>Project</h2>
+          <div class="project_slick">
+            <div class="project_card">
+              <div class="proj_img" style="background-color: #fff">
+                <img
+                  style="width: 80%"
+                  src="./img/pro_minibook.png"
+                  alt="프로젝트이미지"
+                />
               </div>
-              <div class="desc">
-                웹접근성과 웹표준 준수를 가장 많이 고려하여 제작한 개인 프로젝트입니다. 
-              </div>
-              <div class="skills_info">
-                <div class="skills">
-                  <p>Html</p>
-                  <p>CSS</p>
-                  <p>Java Script</p>
-                  <p>Web Accessibility</p>
+              <div class="proj_desc">
+                <div class="title">
+                  <p class="fc_point">Work</p>
+                  <p>미니북</p>
                 </div>
-                <div class="info_link">
-                  <a href="http://dasomdev.dothome.co.kr/au" target="_blank"><i class="fa-solid fa-up-right-from-square"></i> 프로젝트 보기</a>
+                <div class="desc">
+                  디지털 교과서로 학습할 수 있는 학습서비스와 이를 관리하는
+                  어드민 서비스를 개발하였습니다.
+                </div>
+                <div class="skills_info">
+                  <div class="skills">
+                    <p>VUE</p>
+                    <p>Tailwind</p>
+                    <p>Responsive</p>
+                    <p>API</p>
+                  </div>
+                  <div class="info_link">
+                    <!-- <a href="https://github.com/DasomDev/petner-dc" target="_blank"><i class="fa-brands fa-github"></i> github</a> -->
+                    <a href="https://www.minibook.co.kr/service"
+                      ><i class="fa-solid fa-up-right-from-square"></i> 프로젝트
+                      보기</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project_card">
+              <div class="proj_img">
+                <img src="./img/pro_t2.png" alt="프로젝트이미지" />
+              </div>
+              <div class="proj_desc">
+                <div class="title">
+                  <p class="fc_point">Personal Project</p>
+                  <p>차(Tea) 쇼핑몰</p>
+                </div>
+                <div class="desc">
+                  PC, Tablet, Mobile 반응형 사이트 제작. PHP를 사용하여
+                  회원가입, 로그인 구현
+                </div>
+                <div class="skills_info">
+                  <div class="skills">
+                    <p>Java Script</p>
+                    <p>PHP</p>
+                    <p>MariaDB</p>
+                    <p>Responsive Web</p>
+                  </div>
+                  <div class="info_link">
+                    <!-- <a href=""><i class="fa-brands fa-github"></i> github</a> -->
+                    <a href="http://dasomdev.dothome.co.kr/t2" target="_blank"
+                      ><i class="fa-solid fa-up-right-from-square"></i> 프로젝트
+                      보기</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project_card" style="display: none">
+              <div class="proj_img" style="background-color: #6ed3c1">
+                <img src="./img/pro_au1.png" alt="프로젝트이미지" />
+              </div>
+              <div class="proj_desc">
+                <div class="title">
+                  <p class="fc_point">Personal Project</p>
+                  <p>호주관광청</p>
+                </div>
+                <div class="desc">
+                  웹접근성과 웹표준 준수를 가장 많이 고려하여 제작한 개인
+                  프로젝트입니다.
+                </div>
+                <div class="skills_info">
+                  <div class="skills">
+                    <p>Html</p>
+                    <p>CSS</p>
+                    <p>Java Script</p>
+                    <p>Web Accessibility</p>
+                  </div>
+                  <div class="info_link">
+                    <a href="http://dasomdev.dothome.co.kr/au" target="_blank"
+                      ><i class="fa-solid fa-up-right-from-square"></i> 프로젝트
+                      보기</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project_card">
+              <div class="proj_img">
+                <img src="./img/pro_pet.png" alt="프로젝트이미지" />
+              </div>
+              <div class="proj_desc">
+                <div class="title">
+                  <p class="fc_point">Stdudy Project</p>
+                  <p>펫트너</p>
+                </div>
+                <div class="desc">
+                  반려동물 돌봄 서비스 플랫폼, 팀프로젝트로 진행하여 협업을 통해
+                  커뮤니케이션을 향상했습니다.
+                </div>
+                <div class="skills_info">
+                  <div class="skills">
+                    <p>Java</p>
+                    <p>Spring</p>
+                    <p>Oracle</p>
+                    <p>Java Script</p>
+                    <p>API</p>
+                  </div>
+                  <div class="info_link">
+                    <a
+                      href="https://github.com/DasomDev/petner-dc"
+                      target="_blank"
+                      ><i class="fa-brands fa-github"></i> github</a
+                    >
+                    <!-- <a href=""><i class="fa-solid fa-up-right-from-square"></i> 프로젝트 보기</a> -->
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          
-          <div class="project_card">
-            <div class="proj_img"><img src="./img/pro_pet.png" alt="프로젝트이미지"/></div>
-            <div class="proj_desc">
-              <div class="title">
-                <p class="fc_point">Stdudy Project</p>
-                <p>펫트너</p>
-              </div>
-              <div class="desc">
-                반려동물 돌봄 서비스 플랫폼, 팀프로젝트로 진행하여 협업을 통해 커뮤니케이션을 향상했습니다.
-              </div>
-              <div class="skills_info">
-                <div class="skills">
-                  <p>Java</p>
-                  <p>Spring</p>
-                  <p>Oracle</p>
-                  <p>Java Script</p>
-                  <p>API</p>
-                </div>
-                <div class="info_link">
-                  <a href="https://github.com/DasomDev/petner-dc" target="_blank"><i class="fa-brands fa-github"></i> github</a>
-                  <!-- <a href=""><i class="fa-solid fa-up-right-from-square"></i> 프로젝트 보기</a> -->
-                </div>
-              </div>
+        </div>
+        <!-- Contact -->
+        <div id="contact" class="contact" style="display: none">
+          <h2>contact</h2>
+          <form action="">
+            <div>
+              <p>Email</p>
+              <input type="text" placeholder="회신받을 메일을 입력해주세요gg" />
             </div>
-          </div>
-          
+            <div>
+              <p>Message</p>
+              <textarea name=""></textarea>
+            </div>
+            <p class="send_msg">메시지보내기</p>
+          </form>
         </div>
       </div>
-      <!-- Contact -->
-      <div id="contact" class="contact" style="display:none">
-        <h2>contact</h2>
-        <form action="">
-          <div>
-            <p>Email</p>
-            <input type="text" placeholder="회신받을 메일을 입력해주세요gg">
-          </div>
-          <div>
-            <p>Message</p>
-            <textarea name=""></textarea>
-          </div>
-          <p class="send_msg">메시지보내기</p>
-        </form>
-      </div>      
+      <footer>
+        <p>포트폴리오 조다솜 | &#169; Copyright 2024</p>
+      </footer>
     </div>
-    <footer>
-      <p>포트폴리오 조다솜 | &#169; Copyright 2023</p>
-    </footer>
-  </div>
-</body>
+  </body>
 </html>
 
 <style>
-/* .about{border-top:1px solid green} */
-
+  /* .about{border-top:1px solid green} */
 </style>
 
 <script>
-  gsap.registerPlugin(ScrollTrigger);
-  
+  gsap.registerPlugin(ScrollTrigger)
+
+  gsap.set(".helloworld_en", { autoAlpha: 0 })
+
+  const koreanText = document.querySelector(".helloworld")
+  const englishText = document.querySelector(".helloworld_en")
+
+  koreanText.addEventListener("mouseenter", () => {
+    gsap.to(koreanText, { autoAlpha: 0, duration: 0.5 })
+    gsap.to(englishText, { autoAlpha: 1, duration: 0.5 })
+  })
+
+  englishText.addEventListener("mouseleave", () => {
+    gsap.to(englishText, { autoAlpha: 0, duration: 0.5 })
+    gsap.to(koreanText, { autoAlpha: 1, duration: 0.5 })
+  })
+
   ScrollTrigger.matchMedia({
-    "all": function(){
-      gsap.from(".container .intro .profile", {y:-100,  duration:2, opacity:0});
-      gsap.from(".container .intro .helloworld", {y:-50,  duration:2, opacity:0, delay:0.5});
+    all: function () {
+      gsap.from(".container .intro .profile", {
+        y: -100,
+        duration: 2,
+        opacity: 0,
+      })
+      gsap.from(".container .intro .helloworld", {
+        y: -50,
+        duration: 2,
+        opacity: 0,
+        delay: 0.5,
+      })
 
       gsap.from(".container .about h2", {
-				scrollTrigger: {
-						trigger: ".container .about h2",
-					  start: "30px 90%",
-                       
-				}
-				, opacity: 0
-				, y : -40
-				, duration:1.4
-				, ease: "back"
-			})
+        scrollTrigger: {
+          trigger: ".container .about h2",
+          start: "30px 90%",
+        },
+        opacity: 0,
+        y: -40,
+        duration: 1.4,
+        ease: "back",
+      })
 
       gsap.from(".container .about .row1", {
-				scrollTrigger: {
-						trigger: ".container .about .row1",           
-					  start: "30px 80%"
-				}
+        scrollTrigger: {
+          trigger: ".container .about .row1",
+          start: "30px 80%",
+        },
         // , delay: 0.4
-				, opacity: 0
-				, y : -40
-				, duration:1.4
-				, ease: "back"
-			});
-      
+        opacity: 0,
+        y: -40,
+        duration: 1.4,
+        ease: "back",
+      })
 
       gsap.from(".container #about > div.row2 > p", {
-				scrollTrigger: {
-						trigger: "#about > div.row2 > p",           
-					  start: "bottom 80%",
-            // markers:true
-				}
-				, opacity: 0
-				, y : -40
-				, duration:1.4
-				, ease: "back"
-			});
-      
-      
+        scrollTrigger: {
+          trigger: "#about > div.row2 > p",
+          start: "bottom 80%",
+          // markers:true
+        },
+        opacity: 0,
+        y: -40,
+        duration: 1.4,
+        ease: "back",
+      })
 
-     
       gsap.from(".container .about .row2 tr:nth-child(1)", {
-				scrollTrigger: {
-						trigger: ".container .about .row2 tr:nth-child(1)",
-            //markers: true,
-					  start: "top 80%"
-				}
-        , delay: 0.4
-				, opacity: 0
-				, y : -40
-				, duration:1.4
-				, ease: "back"
-			});
+        scrollTrigger: {
+          trigger: ".container .about .row2 tr:nth-child(1)",
+          //markers: true,
+          start: "top 80%",
+        },
+        delay: 0.4,
+        opacity: 0,
+        y: -40,
+        duration: 1.4,
+        ease: "back",
+      })
 
       gsap.from(".container .about .row2 tr:nth-child(2)", {
-				scrollTrigger: {
-						trigger: ".container .about .row2 tr:nth-child(2)",
-            //markers: true,
-					  start: "top 80%"
-				}
-        , delay: 0.4
-				, opacity: 0
-				, y : -40
-				, duration:1.4
-				, ease: "back"
-			});
+        scrollTrigger: {
+          trigger: ".container .about .row2 tr:nth-child(2)",
+          //markers: true,
+          start: "top 80%",
+        },
+        delay: 0.4,
+        opacity: 0,
+        y: -40,
+        duration: 1.4,
+        ease: "back",
+      })
 
       gsap.from(".container #skills", {
-				scrollTrigger: {
-						trigger: ".container #skills",
-					  start: "-50px 80%",
-            // markers:true
-				}
-        , delay: 0.4
-				, opacity: 0
-				, y : -40
-				, duration:1.4
-				, ease: "back"
-			});
+        scrollTrigger: {
+          trigger: ".container #skills",
+          start: "-50px 80%",
+          // markers:true
+        },
+        delay: 0.4,
+        opacity: 0,
+        y: -40,
+        duration: 1.4,
+        ease: "back",
+      })
 
       gsap.from(".container #project > *", {
-				scrollTrigger: {
-						trigger: ".container #project",
-            // markers: true,
-					  start: "top 80%"
-				}
-        , delay: 0.4
-				, opacity: 0
-				, y : -40
-				, duration:1.4
-				, ease: "back"
-        , stagger:{
-              each:0.2
-            // , from: 5
-          }
-			});
+        scrollTrigger: {
+          trigger: ".container #project",
+          // markers: true,
+          start: "top 80%",
+        },
+        delay: 0.4,
+        opacity: 0,
+        y: -40,
+        duration: 1.4,
+        ease: "back",
+        stagger: {
+          each: 0.2,
+          // , from: 5
+        },
+      })
 
       // gsap.from(".project_card",
       //   {
@@ -388,32 +536,28 @@
       //     , duration: 1
       //     , ease:"back"
       //     , stagger:{
-      //         each:0.2            
+      //         each:0.2
       //     }
       //   })
-
-      
-
-    }
+    },
   })
 
-  $(document).ready(function(){
-   
-    $('nav > a').click(function (){
-    	$('html, body').animate({scrollTop: $(this.hash).offset.top}, 300);
-    });
+  $(document).ready(function () {
+    $("nav > a").click(function () {
+      $("html, body").animate({ scrollTop: $(this.hash).offset.top }, 300)
+    })
 
     // Header script 스크롤 되면 상단에 고정한다
-    $(window).scroll(function(){  
-      var scrollVal = $(this).scrollTop()*10;
+    $(window).scroll(function () {
+      var scrollVal = $(this).scrollTop() * 10
 
-      if(scrollVal > 520){
-        $("header").addClass("fixed");
-        $(".wrapper").css({"padding-top":"92px"})
-      }else{
-        $("header").removeClass("fixed");
-        $(".wrapper").css({"padding-top":"0"})
+      if (scrollVal > 520) {
+        $("header").addClass("fixed")
+        $(".wrapper").css({ "padding-top": "92px" })
+      } else {
+        $("header").removeClass("fixed")
+        $(".wrapper").css({ "padding-top": "0" })
       }
-    });  
+    })
   })
 </script>
