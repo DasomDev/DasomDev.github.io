@@ -392,11 +392,11 @@ footer {
   #education table td:nth-child(1),
   .skills table td:nth-child(1) {
     padding-right: 0;
+    width: 100%;
   }
   #education table td:nth-child(2),
   .skills table td:nth-child(2) {
     padding: 0 10px 25px;
-    color:red;
     border-bottom: 1px solid var(--font-grey);
   }
 
@@ -407,7 +407,8 @@ footer {
   #skills p {
   }
 
-  .project {
+  .project,
+  #education {
     padding: 0 15px;
   }
   .project .project_card {
@@ -428,6 +429,9 @@ footer {
     box-shadow: 5px 5px 0px 0 var(--font-blue);
   }
 
+  .project .proj_desc{
+    width: 90%;
+  }
   .project .proj_desc .desc {
     line-height: 20px;
   }
@@ -453,6 +457,8 @@ footer {
     text-align: center;
     border: 0;
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
   }
   #contact {
     display: none;
