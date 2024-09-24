@@ -16,6 +16,7 @@
       integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
       crossorigin="anonymous"
     ></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
@@ -45,9 +46,9 @@
           </div>
         </div>
       </header>
-      <div class="container">
+      <div class="container" class="max-w-[1200px]">
         <!-- INTRO -->
-        <div class="intro">
+        <section class="intro">
           <p class="profile">
             <span class="frame"></span>
             <img src="./img/dasom35.png" alt="프로필이미지" />
@@ -72,9 +73,9 @@
               ><br />
             </div>
           </div>
-        </div>
+        </section>
         <!-- ABOUT -->
-        <div id="about" class="about">
+        <section id="about" class="about">
           <h2>About</h2>
           <div class="row1">
             <p class="about_sub_title">
@@ -99,9 +100,9 @@
               </p>
             </div>
           </div>
-        </div>
+        </section>
         <!-- SKILL STACK -->
-        <div id="skills" class="skills">
+        <section id="skills" class="skills">
           <h2>Skills</h2>
           <p class="summary">
             ✨ 저는 Vue.js와 JavaScript (ES6+)와 같은 최신 기술을 사용한
@@ -151,9 +152,9 @@
               </td>
             </tr>
           </table>
-        </div>
+        </section>
         <!-- 프로젝트 -->
-        <div id="project" class="project">
+        <section id="project" class="project">
           <h2>Project</h2>
           <div class="project_slick">
             <!-- 보카 카드 -->
@@ -188,6 +189,18 @@
             </div> -->
             <!-- 미니북 -->
             <div class="project_card">
+              <button
+                data-key="minibook"
+                style="
+                  position: absolute;
+                  right: 12px;
+                  top: 12px;
+                  cursor: pointer;
+                "
+              >
+                <i class="fa-solid fa-ellipsis"></i>
+              </button>
+
               <div class="proj_img" style="background-color: #fff">
                 <img
                   style="width: 80%"
@@ -325,9 +338,14 @@
               </div>
             </div>
           </div>
-        </div>
+          <!-- 프로젝트 상세 -->
+          <div class="project_layer">
+            <div id="project_Detail">json goes herr</div>
+            <!-- <img src="./img/all-menu-cube.png" style="width: 300px" alt="" /> -->
+          </div>
+        </section>
         <!-- 교육 -->
-        <div id="education">
+        <section id="education">
           <p class="about_sub_title">
             <i class="fa-solid fa-book-open"></i>&nbsp;&nbsp;교육
           </p>
@@ -413,10 +431,10 @@
               </td>
             </tr>
           </table>
-        </div>
+        </section>
 
         <!-- Contact -->
-        <div id="contact" class="contact" style="display: none">
+        <section id="contact" class="contact" style="display: none">
           <h2>contact</h2>
           <form action="">
             <div>
@@ -429,7 +447,7 @@
             </div>
             <p class="send_msg">메시지보내기</p>
           </form>
-        </div>
+        </section>
       </div>
       <footer>
         <p>dasomcho.dev@gmail.com</p>
@@ -440,7 +458,28 @@
 </html>
 
 <style>
-  /* .about{border-top:1px solid green} */
+  
+  @keyframes float {
+    0% {
+      transform: translate(0, 0);
+      animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    25% {
+      transform: translate(0, -30px);
+      animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+    }
+    50% {
+      transform: translate(0, 0);
+      animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    75% {
+      transform: translate(0, 30px);
+      animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
 </style>
 
 <script>
@@ -460,6 +499,15 @@
     gsap.to(englishText, { autoAlpha: 0, duration: 0.5 });
     gsap.to(koreanText, { autoAlpha: 1, duration: 0.5 });
   });
+
+  // gsap.to("button", {
+  //   y: 12, // Small vertical movement for a subtle bounce
+  //   duration: 1, // Shorter duration for quicker bounce
+  //   ease: "bounce.out", // Bounce easing for smooth motion
+  //   repeat: -1, // Repeat indefinitely
+  //   yoyo: true, // Make it bounce back to the original position
+  //   delay: 5, // Optional delay before the animation starts
+  // });
 
   ScrollTrigger.matchMedia({
     all: function () {
@@ -580,9 +628,77 @@
     },
   });
 
+  let projectJson = [];
+  fetch("project.json")
+    .then((response) => response.json())
+    .then((data) => {
+      projectJson = data;
+      console.log(projectJson);
+    })
+    .catch((error) => console.error("Error loading JSON:", error));
+
+  function showProjectDetail(key) {
+    // Get the array of projects based on the key
+    const projects = projectJson[key]; // Now `projects` is an array of project objects
+
+    // Check if the project array exists and is not empty
+    if (!projects || projects.length === 0) {
+      console.error("No projects found with key:", key);
+      return;
+    }
+
+    // Get the modal content container
+    const modalContent = document.getElementById("project_Detail");
+
+    // Initialize an empty string for the content
+    let content = "";
+
+    // Iterate over the array of projects
+    projects.forEach((project) => {
+      // Create the HTML content for each project in the array
+      content += `<div class="project_item">
+                        <h2 style='text-decoration: none'>🚀 ${
+                          project.title
+                        }</h2>
+                        <p><strong>📄 개요: </strong> ${project.overview}</p>
+                        <p><strong>💻 사용 기술:</strong> ${project.technologies.join(
+                          ", "
+                        )}</p>
+                        <p><strong>주요 업무:</strong></p>
+                        <ul>`;
+
+      // Loop through tasks and append each one
+      project.tasks.forEach((task) => {
+        content += `<li>${task}</li>`;
+      });
+
+      content += `</ul><p><strong>성과:</strong></p><ul>`;
+
+      // Loop through achievements and append each one
+      project.achievements.forEach((achievement) => {
+        content += `<li>${achievement}</li>`;
+      });
+
+      content += `</ul></div>`;
+    });
+
+    // Inject the generated content into the modal
+    modalContent.innerHTML = content;
+  }
+
   $(document).ready(function () {
     $("nav > a").click(function () {
       $("html, body").animate({ scrollTop: $(this.hash).offset.top }, 300);
+    });
+
+    $(".project_card button").click(function () {
+      var key = $(this).data("key");
+      $(".project_layer").css("display", "flex");
+      showProjectDetail(key);
+    });
+
+    $(".project_layer").click(function () {
+      $(".project_layer").hide();
     });
 
     // Header script 스크롤 되면 상단에 고정한다

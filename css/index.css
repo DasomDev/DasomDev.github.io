@@ -79,7 +79,7 @@ h2 {
   margin-bottom: 20px;
 }
 
-.container > div {
+.container > section {
   max-width: 1200px;
   margin: 80px auto 0;
 }
@@ -187,6 +187,7 @@ table td:nth-child(2) {
   margin-bottom: 30px;
   background-color: #17203a;
   overflow: hidden;
+  position: relative
 }
 .project .project_card:nth-child(2) {
   background-color: #3e4a6d;
@@ -249,6 +250,115 @@ table td:nth-child(2) {
 .project .proj_desc .info_link {
   display: flex;
   gap: 10px;
+}
+
+/* 프로젝트 추가정보 */
+
+.project_card button {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  cursor: pointer;
+  font-size: 20px;
+  background: none;
+  color: #fff;
+  /* color: var(--font-blue); */
+}
+.project_layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgb(14 13 13 / 80%);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.project_layer > div {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 90%;
+  height: 82%;
+  padding: 24px 32px;
+  border: none;
+  text-align: left;
+  color: #31384f;
+  overflow-y: scroll;
+}
+
+.project_layer > div::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* Hide scrollbar for Firefox */
+.project_layer > div {
+  scrollbar-width: none; /* For Firefox */
+}
+
+.project_item {
+  background-color: #1c1f26; /* Darker background for the modal */
+  width: 210mm; /* A4-like width */
+  padding: 20mm;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Stronger shadow for depth */
+  border: 1px solid #2e3239; /* Subtle border for separation */
+  color: #d1d5db; /* Lighter text for contrast against dark background */
+}
+
+.project_item h2 {
+  font-size: 26px;
+  margin-bottom: 24px;
+  text-align: center;
+  padding-bottom: 10px;
+  color: #FFF; /* Bright white for headings */
+}
+
+.project_item p,
+.project_item ul {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #b5b9bf; /* Slightly dimmed white for better readability */
+  margin-bottom: 15px;
+}
+
+.project_item ul {
+  padding-left: 20px;
+}
+
+.project_item ul li {
+  margin-bottom: 10px;
+  list-style-type: disc; /* Ensure list bullets are visible in dark mode */
+}
+
+.project_item strong {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Button Styling for Close Button (Optional) */
+.project_item button {
+  background-color: #3d8bfd; /* Accent color for button */
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.project_item button:hover {
+  background-color: #3073dd; /* Slightly darker hover state */
+}
+
+.project_layer img {
+  animation: float 2s infinite;
 }
 
 /*  */
@@ -338,9 +448,14 @@ footer {
 
 /* 모바일 */
 @media all and (min-width: 320px) and (max-width: 700px) {
+  .wrapper{
+    max-width: 100vw;
+    overflow: hidden;
+  }
   header {
     width: 100%;
     padding: 10px 0;
+    /* display: none; */
   }
   .header_inner {
     flex-wrap: wrap;
@@ -353,15 +468,19 @@ footer {
     flex: 1;
     justify-content: flex-end;
     color: var(--font-blue);
+    display: none;
   }
   nav {
     flex-grow: 1;
     margin-left: 18px;
     justify-content: space-between;
+    margin-right: 18px;
   }
   nav a {
     padding: 0;
+    font-size: 12px;
   }
+
 
   .container .intro {
     width: 100%;
@@ -419,6 +538,32 @@ footer {
     border: 2px solid #343a4a;
     padding: 30px 0 0;
     margin-bottom: 50px;
+    position: relative;
+  }
+
+  .project_layer{
+    max-width: 100vw;
+  }
+
+  .project_layer > div{
+    padding:12px
+  }
+
+  .project_item{
+    width: 100%;
+    padding:32px;
+    margin:0;
+    box-sizing: border-box;
+  }
+
+  .project_item h2{
+    font-size: 22px;
+    line-height: 24px;
+  }
+  #project .project_card .more{
+    position: absolute;
+    right: 8px;
+    top: 8px
   }
 
   .project .proj_img {
@@ -447,8 +592,7 @@ footer {
     align-items: flex-start;
   }
 
-  .project .proj_desc .info_link {
-  }
+  .project_item{}
 
   footer {
     box-sizing: border-box;
