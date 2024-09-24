@@ -193,7 +193,7 @@
                 data-key="minibook"
                 style="
                   position: absolute;
-                  right: 12px;
+                  right: 24px;
                   top: 12px;
                   cursor: pointer;
                 "
@@ -244,7 +244,7 @@
                 data-key="petner"
                 style="
                   position: absolute;
-                  right: 12px;
+                  right: 24px;
                   top: 12px;
                   cursor: pointer;
                 "
@@ -667,11 +667,11 @@
     projects.forEach((project) => {
       // Create the HTML content for each project in the array
       content += `<div class="project_item">
-                        <h2 style='text-decoration: none'>🚀 ${
+                        <h2 style='text-decoration: none'>🚀&nbsp;&nbsp;${
                           project.title
                         }</h2>
-                        <p><strong>📄&nbsp;&nbsp;개요: </strong> ${project.overview}</p>
-                        <p><strong>💻&nbsp;&nbsp;사용 기술:</strong> ${project.technologies.join(
+                        <p><strong>📄&nbsp;&nbsp;개요: </strong> &nbsp;&nbsp;${project.overview}</p>
+                        <p><strong>💻&nbsp;&nbsp;사용 기술:</strong> &nbsp;&nbsp;${project.technologies.join(
                           ", "
                         )}</p>
                         <p><strong>주요 업무:</strong></p>
