@@ -64,6 +64,8 @@ header.fixed {
   right: 0;
   background-color: rgb(255 255 255 / 90%);
   padding: 10px 0;
+  background-color: #303052bf;
+  backdrop-filter: blur(4px);
 }
 header.fixed .sub_icons {
   color: var(--font-blue);
@@ -137,7 +139,7 @@ table td:first-child {
 }
 table td:nth-child(2) {
   font-weight: 100;
-  line-height: 24px;
+  line-height: 28px;
 }
 
 .about .value {
@@ -187,7 +189,57 @@ table td:nth-child(2) {
   margin-bottom: 30px;
   background-color: #17203a;
   overflow: hidden;
-  position: relative
+  position: relative;
+  box-sizing: border-box;
+}
+
+.project_card u {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+
+.project_card u:before {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: #fac748bf;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  transition: 0.4s transform ease;
+  transform: scale3d(0, 1, 1);
+  transform-origin: 100% 50%;
+}
+
+.project_card:hover u::before {
+  transform: scaleZ(1);
+  transform-origin: 0 50%;
+}
+
+.project_card:hover u:nth-child(1)::before {
+  transition-delay: 0s; /* No delay for the first */
+  transform: scaleX(1);
+}
+
+.project_card:hover u:nth-child(2)::before {
+  transition-delay: 0.4s; /* Add delay for the second */
+  transform: scaleX(1);
+}
+
+.project_card:hover u:nth-child(3)::before {
+  transition-delay: 0.6s; /* Add more delay for the third */
+  transform: scaleX(1);
+}
+
+.proj_img {
+  overflow: hidden;
+}
+.project_card:hover .proj_img img {
+  transform: scale(1.1);
+}
+.proj_img img {
+  transition: all 0.8s;
 }
 .project .project_card:nth-child(2) {
   background-color: #3e4a6d;
@@ -317,7 +369,7 @@ table td:nth-child(2) {
   margin-bottom: 24px;
   text-align: center;
   padding-bottom: 10px;
-  color: #FFF; /* Bright white for headings */
+  color: #fff; /* Bright white for headings */
 }
 
 .project_item p,
@@ -370,6 +422,27 @@ table td:nth-child(2) {
   font-size: 1.3rem;
   font-weight: 100;
   color: var(--font-white);
+}
+
+/* PROJECT NEW */
+#project_new {
+  max-width: 1200px;
+  border: 1px solid white;
+}
+.project_folder {
+  position: relative;
+}
+.project_folder img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0%;
+  transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.project_folder img:hover {
+  transform: scale(1.2);
 }
 
 /* CONTACT */
@@ -425,11 +498,19 @@ footer {
   padding: 30px 0 50px;
   margin-top: 40px;
   font-size: 1.3rem;
-  color: var(--font-grey);
+  /* color: var(--font-grey); */
+  color: #969fbe;
   text-align: right;
   display: flex;
+  flex-direction: column;
   justify-content: end;
+  align-items: end;
   gap: 12px;
+}
+
+footer .email{
+  display: flex;
+  gap: 4px;
 }
 
 .pb10 {
@@ -448,7 +529,7 @@ footer {
 
 /* 모바일 */
 @media all and (min-width: 320px) and (max-width: 700px) {
-  .wrapper{
+  .wrapper {
     max-width: 100vw;
     overflow: hidden;
   }
@@ -480,7 +561,6 @@ footer {
     padding: 0;
     font-size: 12px;
   }
-
 
   .container .intro {
     width: 100%;
@@ -541,29 +621,29 @@ footer {
     position: relative;
   }
 
-  .project_layer{
+  .project_layer {
     max-width: 100vw;
   }
 
-  .project_layer > div{
-    padding:12px
+  .project_layer > div {
+    padding: 12px;
   }
 
-  .project_item{
+  .project_item {
     width: 100%;
-    padding:32px;
-    margin:0;
+    padding: 32px;
+    margin: 0;
     box-sizing: border-box;
   }
 
-  .project_item h2{
+  .project_item h2 {
     font-size: 22px;
     line-height: 24px;
   }
-  #project .project_card .more{
+  #project .project_card .more {
     position: absolute;
     right: 8px;
-    top: 8px
+    top: 8px;
   }
 
   .project .proj_img {
@@ -574,7 +654,7 @@ footer {
     box-shadow: 5px 5px 0px 0 var(--font-blue);
   }
 
-  .project .proj_desc{
+  .project .proj_desc {
     width: 90%;
   }
   .project .proj_desc .desc {
@@ -592,7 +672,8 @@ footer {
     align-items: flex-start;
   }
 
-  .project_item{}
+  .project_item {
+  }
 
   footer {
     box-sizing: border-box;
@@ -603,6 +684,7 @@ footer {
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
   #contact {
     display: none;
