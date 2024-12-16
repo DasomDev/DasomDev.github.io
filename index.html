@@ -33,7 +33,6 @@
             <a href="#skills">Skills</a>
             <a href="#project">Project</a>
             <a href="#education">Education</a>
-            <!-- <a href="#contact">Contact</a> -->
           </nav>
           <div class="sub_icons">
             <a
@@ -352,6 +351,9 @@
           </div>
           <!-- 프로젝트 상세 -->
           <div class="project_layer">
+            <p class="project_layer_close">
+              <i class="fa-solid fa-xmark"></i>
+            </p>
             <div id="project_Detail">json goes herr</div>
             <!-- <img src="./img/all-menu-cube.png" style="width: 300px" alt="" /> -->
           </div>
@@ -754,7 +756,7 @@
       showProjectDetail(key);
     });
 
-    $(".project_layer").click(function () {
+    $(".project_layer_close").click(function () {
       $(".project_layer").hide();
     });
 

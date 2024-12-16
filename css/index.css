@@ -413,6 +413,19 @@ table td:nth-child(2) {
   animation: float 2s infinite;
 }
 
+.project_layer_close {
+  position: absolute;
+  top: 25px;
+  border: 1px solid #fff;
+  padding: 8px;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  cursor: pointer;
+}
 /*  */
 .fc_point {
   color: var(--font-blue);
@@ -508,7 +521,7 @@ footer {
   gap: 12px;
 }
 
-footer .email{
+footer .email {
   display: flex;
   gap: 4px;
 }
