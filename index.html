@@ -23,6 +23,45 @@
 
     <title>DASOM CHO</title>
   </head>
+  <style>
+    .floating-cube {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      transform-style: preserve-3d;
+      animation: floating 6s ease-in-out infinite;
+    }
+    
+    .cube-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      background: linear-gradient(45deg, 
+        rgba(66, 133, 244, 0.1),
+        rgba(219, 68, 255, 0.1)
+      );
+      backdrop-filter: blur(5px);
+      border-radius: 8px;
+    }
+    
+    .front { transform: translateZ(75px); }
+    .back { transform: translateZ(-75px); }
+    .right { transform: rotateY(90deg) translateZ(75px); }
+    .left { transform: rotateY(-90deg) translateZ(75px); }
+    
+    @keyframes floating {
+      0% {
+        transform: translateY(0) rotateY(0) rotateX(0);
+      }
+      50% {
+        transform: translateY(-20px) rotateY(180deg) rotateX(10deg);
+      }
+      100% {
+        transform: translateY(0) rotateY(360deg) rotateX(0);
+      }
+    }
+    </style>
   <body>
     <div class="wrapper">
       <header>
@@ -47,11 +86,16 @@
         </div>
       </header>
       <div class="container" class="max-w-[1200px]">
+        
         <!-- INTRO -->
         <section class="intro">
           <p class="profile">
-            <span class="frame"></span>
-            <img src="./img/dasom35.png" alt="프로필이미지" />
+            <div class="floating-cube">
+              <div class="cube-face front"></div>
+              <div class="cube-face back"></div>
+              <div class="cube-face right"></div>
+              <div class="cube-face left"></div>
+            </div>
           </p>
           <div class="hello">
             <div class="helloworld">
