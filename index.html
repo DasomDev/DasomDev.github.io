@@ -16,7 +16,7 @@
       integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
       crossorigin="anonymous"
     ></script>
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
@@ -32,6 +32,7 @@
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#project">Project</a>
+            <a href="#experience">Experience</a>
             <a href="#education">Education</a>
           </nav>
           <div class="sub_icons">
@@ -156,6 +157,42 @@
         <section id="project" class="project">
           <h2>Project</h2>
           <div class="project_slick">
+            <!-- QM -->
+            <div class="project_card" style="background-color: #31384f">
+              <div class="proj_img" style="background-color: #3e4a6d">
+                <img
+                  src="./img/qm.png"
+                  alt="애니메이션 코드 생성기 프로젝트 이미지"
+                />
+              </div>
+              <div class="proj_desc">
+                <div class="title">
+                  <p class="fc_point">Work</p>
+                  <p>애니메이션 코드 생성기</p>
+                </div>
+                <div class="desc">
+                  UI 디자이너를 위한 애니메이션 코드 생성기로, 모듈화된 구조와
+                  재사용 가능한 컴포넌트를 활용하여 개발했습니다. Drag & Drop
+                  API, Web Animation API 등 다양한 웹 API를 활용하여 직관적인
+                  인터페이스를 구현했으며, 함수형 프로그래밍 방식을 도입하여
+                  코드의 유지보수성과 확장성을 높였습니다.
+                </div>
+                <div class="skills_info">
+                  <div class="skills">
+                    <p>JavaScript</p>
+                    <p>Web APIs</p>
+                    <p>Modular Design</p>
+                  </div>
+                  <div class="info_link">
+                    <a href="#" class="show-video" data-video="./img/hihi.mp4">
+                      <i class="fa-solid fa-up-right-from-square"></i>프로젝트
+                      보기
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <!-- 미니북 -->
             <div class="project_card">
               <button
@@ -285,7 +322,10 @@
             </div>
 
             <!-- 차(Tea) 쇼핑몰 -->
-            <div class="project_card" style="background-color: #31384f">
+            <div
+              class="project_card"
+              style="display: none; background-color: #31384f"
+            >
               <div class="proj_img" style="background-color: #d0583f">
                 <img src="./img/tea.png" alt="차 쇼핑몰 프로젝트 이미지" />
               </div>
@@ -364,6 +404,67 @@
             <img src="./img/tea.png" alt="" />
           </div>
         </section>
+
+        <!-- 이력 -->
+        <section id="experience">
+          <h2 class="about_sub_title">Experience</h2>
+          <table>
+            <tr>
+              <td>
+                <p class="pb10">코드넛</p>
+                <span class="fc_less">Frontend Developer</span>
+                <br />
+                <span class="fc_less">2023. 10 - present</span>
+              </td>
+              <td>
+                <div>
+                  <p></p>
+                  <p>Vue.js 기반의 웹 애플리케이션 개발 및 유지보수</p>
+                </div>
+                <div>
+                  <p></p>
+                  <p>컴포넌트 모듈화 및 재사용성 향상을 위한 아키텍처 설계</p>
+                </div>
+
+                <div>
+                  <p></p>
+                  <p>
+                    Web Animation API, Drag & Drop API 등 다양한 웹 API 활용
+                  </p>
+                </div>
+
+                <div>
+                  <p></p>
+                  <p>Git을 활용한 버전 관리 및 협업</p>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p class="pb10">올티칭</p>
+                <span class="fc_less">Frontend Developer</span>
+                <br />
+                <span class="fc_less">2023.02 - 2023.05</span>
+                <br />
+                <span class="fc_less">2021.05 - 2022.06</span>
+              </td>
+              <td>
+                <div>
+                  <p></p>
+                  <p style="line-height: 32px;">
+                    Code Igniter 기반 교육/학사관리 시스템 유지보수
+                    신규 기능 개발 및 기존 기능 고도화<br/>
+                    시스템 로그 분석 및 버그 수정으로 서비스 안정성 확보<br/>
+                    영업/마케팅 데이터 시각화 인트라넷 구축<br/>
+                    부서/직위별 접근 권한 관리 시스템 구현
+                  </p>
+                </div>
+                
+              </td>
+            </tr>
+          </table>
+        </section>
+
         <!-- 교육 -->
         <section id="education">
           <p class="about_sub_title">
@@ -469,6 +570,55 @@
           </form>
         </section>
       </div>
+      <!-- 비디오 모달 추가 -->
+      <div
+        class="video_layer"
+        style="
+          display: none;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.85);
+          z-index: 1000;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <p
+          class="video_layer_close"
+          style="
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            color: #d1d5db;
+            cursor: pointer;
+            font-size: 24px;
+          "
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </p>
+        <div
+          class="video_container"
+          style="
+            background-color: #1c1f26;
+            width: 210mm;
+            padding: 20mm;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+            border: 1px solid #2e3239;
+            color: #d1d5db;
+          "
+        >
+          <video controls style="width: 100%; border-radius: 4px">
+            <source src="./img/hihi.mp4" type="video/mp4" />
+
+            브라우저가 비디오 재생을 지원하지 않습니다.
+          </video>
+        </div>
+      </div>
       <footer>
         <p>조다솜 | 프론트엔드 개발자</p>
         <p class="email">
@@ -479,7 +629,7 @@
           dasomcho.dev@gmail.com
         </p>
 
-        <p>&#169; Copyright 2024</p>
+        <p>&#169; Copyright 2025</p>
       </footer>
     </div>
   </body>
@@ -770,6 +920,48 @@
       } else {
         $("header").removeClass("fixed");
         $(".wrapper").css({ "padding-top": "0" });
+      }
+    });
+
+    // 비디오 모달 관련 스크립트
+    $(".show-video").click(function (e) {
+      e.preventDefault();
+      const videoSrc = $(this).data("video");
+      const videoElement = $(".video_layer video")[0];
+
+      // 비디오 소스 설정 및 로드
+      $(".video_layer video source").attr("src", videoSrc);
+      videoElement.load();
+
+      // 모달 표시
+      $(".video_layer").css("display", "flex").hide().fadeIn(300);
+
+      // 비디오 자동 재생
+      videoElement.play();
+    });
+
+    $(".video_layer_close").click(function () {
+      const videoElement = $(".video_layer video")[0];
+
+      // 페이드 아웃 효과와 함께 모달 닫기
+      $(".video_layer").fadeOut(300, function () {
+        // 비디오 정지 및 시간 초기화
+        videoElement.pause();
+        videoElement.currentTime = 0;
+      });
+    });
+
+    // ESC 키로 모달 닫기
+    $(document).keydown(function (e) {
+      if (e.key === "Escape" && $(".video_layer").is(":visible")) {
+        $(".video_layer_close").click();
+      }
+    });
+
+    // 모달 외부 클릭시 닫기
+    $(".video_layer").click(function (e) {
+      if (e.target === this) {
+        $(".video_layer_close").click();
       }
     });
   });
