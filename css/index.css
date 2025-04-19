@@ -94,29 +94,15 @@ h2 {
   font-size: 2.3rem;
   line-height: 4.2rem;
   display: flex;
-  gap: 70px;
+  gap: 100px;
   justify-content: center;
   align-items: center;
 }
-.container .intro .profile {
-  width: 200px;
-  height: 200px;
-  position: relative;
-}
-.container .intro .profile .frame {
-  width: 200px;
-  height: 200px;
-  border: 4px solid var(--font-blue);
-  position: absolute;
-  top: -16px;
-  left: -16px;
-  z-index: -1;
-}
+
 .hello {
   position: relative;
 }
-.helloworld {
-}
+
 .helloworld_en {
   position: absolute;
   top: 0;
@@ -563,7 +549,7 @@ footer .email {
     padding: 0 10px;
   }
   header h1 {
-    flex: 0 1 45px;
+    flex: 0 1 38px;
   }
   header .sub_icons {
     flex: 1;

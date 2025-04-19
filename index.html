@@ -31,25 +31,34 @@
       transform-style: preserve-3d;
       animation: floating 6s ease-in-out infinite;
     }
-    
+
     .cube-face {
       position: absolute;
       width: 100%;
       height: 100%;
       border: 2px solid rgba(255, 255, 255, 0.2);
-      background: linear-gradient(45deg, 
+      background: linear-gradient(
+        45deg,
         rgba(66, 133, 244, 0.1),
         rgba(219, 68, 255, 0.1)
       );
       backdrop-filter: blur(5px);
       border-radius: 8px;
     }
-    
-    .front { transform: translateZ(75px); }
-    .back { transform: translateZ(-75px); }
-    .right { transform: rotateY(90deg) translateZ(75px); }
-    .left { transform: rotateY(-90deg) translateZ(75px); }
-    
+
+    .front {
+      transform: translateZ(75px);
+    }
+    .back {
+      transform: translateZ(-75px);
+    }
+    .right {
+      transform: rotateY(90deg) translateZ(75px);
+    }
+    .left {
+      transform: rotateY(-90deg) translateZ(75px);
+    }
+
     @keyframes floating {
       0% {
         transform: translateY(0) rotateY(0) rotateX(0);
@@ -61,7 +70,7 @@
         transform: translateY(0) rotateY(360deg) rotateX(0);
       }
     }
-    </style>
+  </style>
   <body>
     <div class="wrapper">
       <header>
@@ -69,9 +78,9 @@
           <h1><img src="./img/logoDC.png" alt="" /></h1>
           <nav>
             <a href="#about">About</a>
+            <a href="#experience">Experience</a>
             <a href="#skills">Skills</a>
             <a href="#project">Project</a>
-            <a href="#experience">Experience</a>
             <a href="#education">Education</a>
           </nav>
           <div class="sub_icons">
@@ -86,17 +95,14 @@
         </div>
       </header>
       <div class="container" class="max-w-[1200px]">
-        
         <!-- INTRO -->
         <section class="intro">
-          <p class="profile">
-            <div class="floating-cube">
-              <div class="cube-face front"></div>
-              <div class="cube-face back"></div>
-              <div class="cube-face right"></div>
-              <div class="cube-face left"></div>
-            </div>
-          </p>
+          <div class="floating-cube">
+            <div class="cube-face front"></div>
+            <div class="cube-face back"></div>
+            <div class="cube-face right"></div>
+            <div class="cube-face left"></div>
+          </div>
           <div class="hello">
             <div class="helloworld">
               안녕하세요<br />
@@ -110,11 +116,7 @@
               Hello<br />
               I'm Dasom Cho, a junior web developer.<br />
               I'm all about building services that
-              <span class="fc_point">truly matter to users.</span><br />
-              I'm passionate about
-              <span class="fc_point">problem-solving</span> and find real
-              satisfaction in <span class="fc_point">overcoming challenges</span
-              ><br />
+              <span class="fc_point">truly matter to users.</span>
             </div>
           </div>
         </section>
@@ -145,16 +147,72 @@
             </div>
           </div>
         </section>
+
+        <!-- 이력 -->
+        <section id="experience">
+          <h2 class="about_sub_title">Experience</h2>
+          <table>
+            <tr>
+              <td>
+                <p class="pb10">코드넛</p>
+                <span class="fc_less">Frontend Developer</span>
+                <br />
+                <span class="fc_less">2023. 10 - present</span>
+              </td>
+              <td>
+                <div>
+                  <p></p>
+                  <p>Vue.js 기반의 웹 애플리케이션 개발 및 유지보수</p>
+                </div>
+                <div>
+                  <p></p>
+                  <p>컴포넌트 모듈화 및 재사용성 향상을 위한 아키텍처 설계</p>
+                </div>
+
+                <div>
+                  <p></p>
+                  <p>
+                    Web Animation API, Drag & Drop API 등 다양한 웹 API 활용
+                  </p>
+                </div>
+
+                <div>
+                  <p></p>
+                  <p>Git을 활용한 버전 관리 및 협업</p>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p class="pb10">올티칭</p>
+                <span class="fc_less">Frontend Developer</span>
+                <br />
+                <span class="fc_less">2023.02 - 2023.05</span>
+                <br />
+                <span class="fc_less">2021.05 - 2022.06</span>
+              </td>
+              <td>
+                <div>
+                  <p></p>
+                  <p style="line-height: 32px">
+                    Code Igniter 기반 교육/학사관리 시스템 유지보수 신규 기능
+                    개발 및 기존 기능 고도화<br />
+                    시스템 로그 분석 및 버그 수정으로 서비스 안정성 확보<br />
+                    영업/마케팅 데이터 시각화 인트라넷 구축<br />
+                    부서/직위별 접근 권한 관리 시스템 구현
+                  </p>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </section>
         <!-- SKILL STACK -->
         <section id="skills" class="skills">
           <h2>Skills</h2>
           <p class="summary">
-            ✨ 저는 Vue.js와 JavaScript (ES6+)와 같은 최신 기술을 사용한
-            프론트엔드 개발을 전문으로 하고 있습니다.<br />
-            또한, PHP, CodeIgniter 및 Oracle과 MySQL과 같은 데이터베이스를
-            사용한 백엔드 개발 경험도 있습니다. <br />
-            백엔드 개념에 대한 이해를 바탕으로 원활하고 효율적인 애플리케이션을
-            개발을 할 수 있습니다.
+            ✨ Vue.js와 JavaScript를 주력으로 하는 프론트엔드 개발자입니다.<br />
+            모던 웹 기술을 활용한 인터랙티브한 사용자 경험 구현에 집중하고
+            있습니다.
           </p>
           <p class="summary" style="display: none">
             ✨ I specialize in frontend development using modern technologies
@@ -166,36 +224,42 @@
             My comprehensive understanding of both frontend and backend concepts
             allows me to build seamless and efficient applications.
           </p>
-          <table>
-            <tr>
-              <td>Frontend</td>
-              <td>
-                <p><b>Java Script (ES6+)</b></p>
-                <p><b>Vue.js</b></p>
-                <p>Html5 (웹접근성 마크업)</p>
-                <p>CSS3, Tailwind</p>
-                <p>Slick, GSAP(GreenSock Animation Platform), Chart.js</p>
-              </td>
-            </tr>
-            <tr>
-              <td>Backend</td>
-              <td>
-                <p>Nest.js</p>
-                <p><b>PHP</b>, Code Igniter</p>
-                <p>Orcale, Mysql</p>
-              </td>
-            </tr>
-            <tr>
-              <td>Tools <br />& Technologies</td>
-              <td>
-                <p>Git (Version Control)</p>
-                <p>VS Code, Eclipse (IDE)</p>
-                <p>Figma</p>
-                <p>Postman (API Testing)</p>
-                <p>DBeaver (Database Management)</p>
-              </td>
-            </tr>
-          </table>
+          <div class="skills-wrapper">
+            <div class="skill-category">
+              <h3>Core Technologies</h3>
+              <div class="skill-items">
+                <div class="skill-card primary">
+                  <span class="skill-name">Vue.js</span>
+                  <div class="skill-tags">
+                    <span>Composition API</span>
+                    <span>Pinia</span>
+                    <span>Vue Router</span>
+                  </div>
+                </div>
+                <div class="skill-card primary">
+                  <span class="skill-name">Styling</span>
+                  <div class="skill-tags">
+                    <span>Tailwind CSS</span>
+                    <span>Responsive Design</span>
+                    <span>Media Queries</span>
+                  </div>
+                </div>
+                <div class="skill-card primary">
+                  <span class="skill-name">GSAP</span>
+                  <div class="skill-tags">
+                    <span>Animation</span>
+                    <span>ScrollTrigger</span>
+                  </div>
+                </div>
+                <div class="skill-card primary">
+                  <span class="skill-name">Chart.js</span>
+                  <div class="skill-tags">
+                    <span>Data Visualization</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
         <!-- 프로젝트 -->
         <section id="project" class="project">
@@ -447,65 +511,6 @@
           </div>
         </section>
 
-        <!-- 이력 -->
-        <section id="experience">
-          <h2 class="about_sub_title">Experience</h2>
-          <table>
-            <tr>
-              <td>
-                <p class="pb10">코드넛</p>
-                <span class="fc_less">Frontend Developer</span>
-                <br />
-                <span class="fc_less">2023. 10 - present</span>
-              </td>
-              <td>
-                <div>
-                  <p></p>
-                  <p>Vue.js 기반의 웹 애플리케이션 개발 및 유지보수</p>
-                </div>
-                <div>
-                  <p></p>
-                  <p>컴포넌트 모듈화 및 재사용성 향상을 위한 아키텍처 설계</p>
-                </div>
-
-                <div>
-                  <p></p>
-                  <p>
-                    Web Animation API, Drag & Drop API 등 다양한 웹 API 활용
-                  </p>
-                </div>
-
-                <div>
-                  <p></p>
-                  <p>Git을 활용한 버전 관리 및 협업</p>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <p class="pb10">올티칭</p>
-                <span class="fc_less">Frontend Developer</span>
-                <br />
-                <span class="fc_less">2023.02 - 2023.05</span>
-                <br />
-                <span class="fc_less">2021.05 - 2022.06</span>
-              </td>
-              <td>
-                <div>
-                  <p></p>
-                  <p style="line-height: 32px">
-                    Code Igniter 기반 교육/학사관리 시스템 유지보수 신규 기능
-                    개발 및 기존 기능 고도화<br />
-                    시스템 로그 분석 및 버그 수정으로 서비스 안정성 확보<br />
-                    영업/마케팅 데이터 시각화 인트라넷 구축<br />
-                    부서/직위별 접근 권한 관리 시스템 구현
-                  </p>
-                </div>
-              </td>
-            </tr>
-          </table>
-        </section>
-
         <!-- 교육 -->
         <section id="education">
           <p class="about_sub_title">
@@ -558,36 +563,29 @@
               </td>
               <td>
                 <div>
-                  <p><i class="fa-solid fa-check"></i> HTML</p>
+                  <p><i class="fa-solid fa-check"></i> HTML/CSS</p>
                   <p>
-                    웹접근성과 웹표준을 준수하여 마크업을 수행합니다<br />
-                    모든 사용자가 편안하고 쉽게 컨텐츠를 소비할 수 있도록 합니다
+                    웹 접근성과 반응형 웹 설계에 대한 깊은 이해를 통해, 사용자
+                    경험을 고려한 웹 페이지 구현 능력을 배웠습니다. 다양한 화면
+                    크기에 맞춰 최적화된 UI를 만들 수 있게 되었습니다.
                   </p>
                 </div>
                 <div>
-                  <p><i class="fa-solid fa-check"></i> CSS</p>
+                  <p><i class="fa-solid fa-check"></i> JavaScript & jQuery</p>
                   <p>
-                    크로스 브라우징과 Media Query를 활용하여 모든 기기에서
-                    동일한 서비스를 제공합니다<br />
-                    다양한 환경에서 일관된 사용자 경험을 보장합니다
-                  </p>
-                </div>
-                <div>
-                  <p><i class="fa-solid fa-check"></i> Java Script / Jquery</p>
-                  <p>
-                    JavaScript와 jQuery를 활용하여 인터랙티브한 웹 개발을
-                    진행합니다<br />
-                    Ajax를 활용하여 비동기적인 웹 페이지를 제작하며, 사용자와의
-                    원활한 상호작용을 구현합니다
+                    동적인 웹 페이지 개발과 비동기 처리(Ajax)에 대한 이해를
+                    바탕으로, 사용자와 실시간으로 상호작용할 수 있는 기능을
+                    구현하는 능력을 키웠습니다. JavaScript로 로직을 설계하고,
+                    jQuery를 활용한 효율적인 데이터 처리 방법을 배웠습니다.
                   </p>
                 </div>
                 <div>
                   <p><i class="fa-solid fa-check"></i> PHP</p>
                   <p>
-                    PHP를 활용하여 웹 서비스의 기본적인 기능인 회원가입, 로그인,
-                    세션 관리, CRUD(Create, Read, Update, Delete)를
-                    구현합니다<br />
-                    데이터 관리와 사용자 인터페이스를 효율적으로 개발합니다
+                    PHP를 활용하여 서버 사이드 개발에 대한 기초를 쌓았고, CRUD
+                    작업 및 데이터베이스 연동을 통해 백엔드와의 효율적인 통합
+                    방법을 배웠습니다. 이 과정에서 웹 애플리케이션의 전체 구조와
+                    흐름을 이해할 수 있었습니다.
                   </p>
                 </div>
               </td>
@@ -938,7 +936,7 @@
 
   $(document).ready(function () {
     $("nav > a").click(function () {
-      $("html, body").animate({ scrollTop: $(this.hash).offset.top }, 300);
+      $("html, body").animate({ scrollTop: $(this.hash).offset().top }, 300);
     });
 
     $(".project_card button").click(function () {
@@ -1007,3 +1005,83 @@
     });
   });
 </script>
+
+<style>
+  .skills-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 1rem;
+  }
+
+  .skill-category h3 {
+    font-size: 1.2rem;
+    color: var(--font-blue);
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+
+  .skill-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .skill-card {
+    background: #1c1f26;
+    border: 1px solid #2e3239;
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .skill-card:hover {
+    transform: translateY(-5px);
+    border: 1px solid var(--font-blue);
+
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .skill-card.primary {
+    background: linear-gradient(135deg, #1c1f26 0%, #2e3239 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .skill-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .skill-tags span {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: #8b949e;
+  }
+
+  @media (hover: hover) {
+    .skill-card:hover .skill-tags span {
+      background: rgba(255, 255, 255, 0.15);
+      color: #fff;
+    }
+  }
+
+  @media (hover: none) {
+    .skill-tags span {
+      background: rgba(255, 255, 255, 0.15);
+      color: #fff;
+    }
+  }
+</style>
