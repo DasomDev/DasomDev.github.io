@@ -182,6 +182,7 @@ table td:nth-child(2) {
   overflow: hidden;
   position: relative;
   box-sizing: border-box;
+  border-radius: 12px;
 }
 
 .project_card u {
@@ -226,6 +227,7 @@ table td:nth-child(2) {
 .proj_img {
   overflow: hidden;
 }
+
 .project_card:hover .proj_img img {
   transform: scale(1.1);
 }
@@ -239,10 +241,11 @@ table td:nth-child(2) {
 .project .proj_img {
   flex-shrink: 0;
   background-color: #bfdbfe;
-  width: 200px;
+  width: 180px;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 10px
 }
 .project .proj_desc {
   width: 65%;
