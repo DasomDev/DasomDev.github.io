@@ -101,6 +101,7 @@ h2 {
 
 .hello {
   position: relative;
+  font-weight: 100;
 }
 
 .helloworld_en {
@@ -265,6 +266,11 @@ table td:nth-child(2) {
 .project .proj_desc .title p:nth-child(2) {
   font-size: 2rem;
 }
+
+.project .proj_desc .date {
+  color:#eee;
+  font-size: 12px;
+}
 .project .proj_desc .desc {
   color: #969fbe;
   line-height: 22px;
@@ -423,7 +429,7 @@ table td:nth-child(2) {
 /*  */
 .fc_point {
   color: var(--font-blue);
-  font-weight: 600;
+  font-weight: 400;
 }
 .fc_less {
   font-size: 1.3rem;
@@ -694,6 +700,84 @@ footer .email {
   }
 
   .project_item {
+  }
+
+  .skills-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 1rem;
+  }
+
+  .skill-category h3 {
+    font-size: 1.2rem;
+    color: var(--font-blue);
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+
+  .skill-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .skill-card {
+    background: #1c1f26;
+    border: 1px solid #2e3239;
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .skill-card:hover {
+    transform: translateY(-5px);
+    border: 1px solid var(--font-blue);
+
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .skill-card.primary {
+    background: linear-gradient(135deg, #1c1f26 0%, #2e3239 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .skill-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .skill-tags span {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: #8b949e;
+  }
+
+  @media (hover: hover) {
+    .skill-card:hover .skill-tags span {
+      background: rgba(255, 255, 255, 0.15);
+      color: #fff;
+    }
+  }
+
+  @media (hover: none) {
+    .skill-tags span {
+      background: rgba(255, 255, 255, 0.15);
+      color: #fff;
+    }
   }
 
   footer {
