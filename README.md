@@ -1,18 +1,42 @@
-# 👋 Hi, I'm Dasom!
+<h1 align="center">👋 Dasom Cho — crafting things that people find useful</h1>
 
-I’m a frontend developer based in Korea 🇰🇷, with 3+ years of experience building interactive web-based tools for education.
+<p align="center">
+  🚀 Frontend Developer passionate about building interactive and creative web experiences  
+</p>
 
-### 🚀 Tech Stack
-- 🧩 Proficient in **Vue.js** (Composition API & Setup syntax)
-- 🎨 Skilled in **Canvas**, **WebAssembly**, and complex UI interactions
-- 🧪 Currently exploring **React**, **TypeScript**, and modern frontend architecture
+---
 
-### 🛠️ What I’m working on
-- 🎓 Developing a **real-time interactive whiteboard** for teacher training programs  
-  (Canvas-based, modular authoring system)
-- 📚 Built an **AI-powered vocabulary editor** to assist language learning  
-  (Vue + AI integration for personalized word recommendations)
+### 🧩 Tech Stack
 
-### 📫 How to reach me
-- Blog/Portfolio: http://dasomdev.github.io
-- Email: dasomcho.dev@gmail.com
+- **Proficient in Vue.js** (2+ years, Composition API & Setup syntax)  
+- **Currently focused on React, Next.js**, and modern **TypeScript** architecture  
+- **Experienced in Canvas-based authoring tools** and **interactive web applications**  
+- Exploring **Flutter** for cross-platform mobile development  
+
+---
+
+### 🛠️ What I’m Working On
+
+- 🧠 Developing a **Next.js flashcard app** with a custom backend and spaced-repetition logic  
+- 📲 Building a **Flutter companion app** to sync with the web platform  
+- 🎮 Experimenting with **web-based mini games** for playful learning experiences  
+
+---
+
+### 🌱 Goals
+
+- Deepen my understanding of **React ecosystem** and scalable frontend architecture  
+- Explore **AI integration** and **real-time interactivity** in education tools  
+
+---
+
+### 📫 Connect with Me
+
+- 🌐 [**Blog / Portfolio**](http://dasomdev.github.io)  
+- 📧 **dasomcho.dev@gmail.com**
+
+---
+
+<p align="center">
+  <i>“I just want to build things that are genuinely helpful to people.”</i> 🌱
+</p>
