@@ -210,9 +210,9 @@
         <section id="skills" class="skills">
           <h2>Skills</h2>
           <p class="summary">
-            ✨ Vue.js와 JavaScript를 주력으로 하는 프론트엔드 개발자입니다.<br />
-            모던 웹 기술을 활용한 인터랙티브한 사용자 경험 구현에 집중하고
-            있습니다.
+            ✨ Vue.js 2년 이상 경험(Composition API & Setup syntax)을 보유한 프론트엔드 개발자입니다.<br />
+            현재 React, Next.js, TypeScript 아키텍처에 집중하고 있으며, Canvas 기반 제작 도구 및 인터랙티브 웹 애플리케이션 개발 경험이 있습니다.<br />
+            Flutter를 통한 크로스 플랫폼 모바일 개발도 탐색 중입니다.
           </p>
           <p class="summary" style="display: none">
             ✨ I specialize in frontend development using modern technologies
@@ -237,20 +237,27 @@
                   </div>
                 </div>
                 <div class="skill-card primary">
-                  <span class="skill-name">Styling</span>
+                  <span class="skill-name">React.js</span>
                   <div class="skill-tags">
-                    <span>Tailwind CSS</span>
-                    <span>Responsive Design</span>
-                    <span>Media Queries</span>
+                    <span>React Router</span>
+                    <span>React Hooks</span>
+                    <span>React Context</span>
                   </div>
                 </div>
                 <div class="skill-card primary">
+                  <span class="skill-name">Tailwind CSS</span>
+                  <div class="skill-tags">
+                    <span>Utility-First</span>
+                    <span>Responsive Design</span>
+                  </div>
+                </div>
+                <!-- <div class="skill-card primary">
                   <span class="skill-name">GSAP</span>
                   <div class="skill-tags">
                     <span>Animation</span>
                     <span>ScrollTrigger</span>
                   </div>
-                </div>
+                </div> -->
                 <div class="skill-card primary">
                   <span class="skill-name">Chart.js, D3.js</span>
                   <div class="skill-tags">
@@ -265,6 +272,41 @@
         <section id="project" class="project">
           <h2>Project</h2>
           <div class="project_slick">
+            <!-- BOARD -->
+            <div class="project_card">
+              <div class="proj_img" style="background-color: #423687">
+                <img
+                  style="width: 92%"
+                  src="./img/board.png"
+                  alt="애니메이션 코드 생성기 프로젝트 이미지"
+                />
+              </div>
+              <div class="proj_desc">
+                <div class="title">
+                  <p class="fc_point">Work</p>
+                  <p>Quest Board</p>
+                  <p class="date">2025.9 - 2025.11</p>
+                </div>
+                <div class="desc">
+                  유저가 가진 자료를 학습 및 수업에 활용 가능한 형태로 만들어주는 <u>Agent 서비스</u>입니다.<br />
+                  주요 기능으로는 <u>학습자료 생성</u> 및 수업시간에 필요한 <u>보드 기능</u>을 접목했습니다.<br />
+                  펜쓰기, 메모 쓰기 등 다양한 인터랙티브 기능을 제공하여 수업 진행을 더욱 효율적으로 지원합니다.
+                </div>
+                <div class="skills_info">
+                  <div class="skills">
+                    <p>Vue.js</p>
+                    <p>Tailwind CSS</p>
+                    <p>OpenAI API</p>
+                  </div>
+                  <div class="info_link">
+                    <a href="https://board.questbook.io" target="_blank">
+                      <i class="fa-solid fa-up-right-from-square"></i>프로젝트
+                      보기
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
             <!-- QM -->
             <div class="project_card" style="background-color: #31384f">
               <div class="proj_img" style="background-color: #435075">
@@ -330,7 +372,10 @@
                     <p>API Integration</p>
                   </div>
                   <div class="info_link">
-                    <a href="https://www.questbook.io" target="_blank">
+                    <a
+                      href="https://questbook.io/vocacard/viewer/ggYjJS"
+                      target="_blank"
+                    >
                       <i class="fa-solid fa-up-right-from-square"></i> 프로젝트
                       보기
                     </a>
@@ -390,8 +435,6 @@
                 </div>
               </div>
             </div>
-
-           
 
             <!-- 펫트너 -->
             <div class="project_card">
@@ -453,7 +496,8 @@
                 </div>
                 <div class="desc">
                   차(茶)를 주제로 구상한 웹사이트입니다.<br />
-                  PC, 모바일에서의 <u>반응형 디자인</u>을 중점으로 작업했습니다.
+                  <u>GSAP</u>를 활용한 다양한 애니메이션 효과를 적용해보며, <u>디자인과 사용자 경험</u>에 중점을 둔 프로젝트입니다.<br />
+                  스크롤 애니메이션, 인터랙티브 요소 등 모던 웹 기술을 실험적으로 적용했습니다.
                 </div>
                 <div class="skills_info">
                   <div class="skills">
@@ -1013,7 +1057,6 @@
     });
   });
 </script>
-
 
 <style>
   .skills-wrapper {
