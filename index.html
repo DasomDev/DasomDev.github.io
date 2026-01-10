@@ -146,7 +146,6 @@
           </div>
         </section>
 
-        
         <!-- SKILL STACK -->
         <section id="skills" class="skills">
           <h2>Skills</h2>
@@ -715,17 +714,10 @@
           </video>
         </div>
       </div>
-      <footer>
-        <p>조다솜 | 프론트엔드 개발자</p>
-        <p class="email">
-          <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:16px">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 1 0-2.636 6.364M16.5 12V8.25" />
-          </svg> -->
-
-          dasomcho.dev@gmail.com
-        </p>
-
-        <p>&#169; Copyright 2025</p>
+      <footer style="letter-spacing: 1px">
+        <p>Frontend Developer | Dasom Cho</p>
+        <p class="email">dasomcho.dev@gmail.com</p>
+        <p>&#169; Copyright <span id="current-year"></span></p>
       </footer>
     </div>
   </body>
@@ -991,6 +983,9 @@
   }
 
   $(document).ready(function () {
+    // 현재 연도 자동 표시
+    $("#current-year").text(new Date().getFullYear());
+
     $("nav > a").click(function () {
       $("html, body").animate({ scrollTop: $(this.hash).offset().top }, 300);
     });
